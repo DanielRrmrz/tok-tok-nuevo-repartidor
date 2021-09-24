@@ -1,0 +1,82 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2017
+  - @license   Fulcrumy
+-->
+<!-- User Information Page -->
+
+<ion-header no-border>
+    <ion-navbar color="orange" hideBackButton>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{'USER_INFORMATION.TITLE' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">
+    <div class="animated fadeInUp">
+        <p class="title1">{{'USER_INFORMATION.WELCOME' | translate}}</p>
+        <p class="title2">{{'USER_INFORMATION.SUBTITLE' | translate}}</p>
+    </div>
+    <form [formGroup]="myForm" novalidate class="animated zoomInUp">
+        <ion-row>
+            <ion-col>
+                <ion-list inset>
+
+                    <!-- Name -->
+                    <ion-item>
+                        <ion-input type="text" formControlName="username" placeholder="Nombre*" [(ngModel)]="UserInfoForm.username"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="myForm.get('username').errors && myForm.get('username').dirty">
+                        <p color="danger" ion-text *ngIf="myForm.get('username').hasError('required')">Este campo es requerido.</p>
+                    </ion-item>
+
+                    <!-- Apellido -->
+                    <ion-item>
+                        <ion-input type="text" formControlName="lastname" placeholder="Apellido*" [(ngModel)]="UserInfoForm.lastname"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="myForm.get('lastname').errors && myForm.get('lastname').dirty">
+                        <p color="danger" ion-text *ngIf="myForm.get('lastname').hasError('required')">Este campo es requerido.</p>
+                    </ion-item>
+
+                    <!-- Phone Mobile -->
+                    <ion-item>
+                        <ion-input type="number" formControlName="phone" placeholder="Teléfono*" [(ngModel)]="UserInfoForm.phone"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="myForm.get('phone').errors && myForm.get('phone').dirty">
+                        <p color="danger" ion-text *ngIf="myForm.get('phone').hasError('required')">Este campo es requerido.</p>
+                    </ion-item>
+
+                    <!-- Email Address -->
+                    <ion-item>
+                        <ion-input type="email" formControlName="email" placeholder="Correo electrónico*" [(ngModel)]="UserInfoForm.email"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+                        <p color="danger" ion-text *ngIf="myForm.get('email').hasError('required')">Este campo es requerido.</p>
+                        <p color="danger" ion-text *ngIf="myForm.get('email').hasError('email')">No es un correo valido.</p>
+                    </ion-item>
+
+                    <!-- Location Address  -->
+                    <ion-item>
+                        <ion-label>Localidad*</ion-label>
+                        <ion-select type="text" formControlName="location" [(ngModel)]="UserInfoForm.location" interface="action-sheet">
+                            <ion-option *ngFor="let sucursal of sucursales" [value]="sucursal.$key">{{ sucursal.estado }}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item *ngIf="myForm.get('location').errors && myForm.get('location').dirty">
+                        <p color="danger" ion-text *ngIf="myForm.get('location').hasError('required')">Este campo es requerido.</p>
+                    </ion-item>
+
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button round color="orange" (click)="registrarUsuario()" [disabled]="!myForm.valid">{{'SECOND_LANDING_PAGE.BUTTON' | translate}}</button>
+            </ion-col>
+        </ion-row>
+    </form>
+
+</ion-content>

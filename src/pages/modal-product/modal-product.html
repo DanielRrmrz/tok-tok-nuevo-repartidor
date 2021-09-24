@@ -1,0 +1,71 @@
+<ion-content padding class="main-view">
+
+    <div class="overlay"></div>
+    <div class="modal_content">
+        <div class="circle">
+            <img src="assets/imgs/logo-icon.png" class="imgRedonda">
+        </div>
+        <div class="modal-content">
+            <ion-grid>
+                <div [formGroup]="myForm">
+                    <ion-row>
+                        <ion-col col-12>
+                            <div text-center>
+                                <h3>¿Qué compramos?</h3>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 text-center>
+                            <div text-center class="cantidad">Cantidad</div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-4 text-center>
+                            <button ion-button item-end color="orange" (click)="decrement()">
+                            <ion-icon name="remove-circle" style="zoom:1.4;"></ion-icon>
+                        </button>
+                        </ion-col>
+                        <ion-col col-4 text-center>
+                            <div class="caja">
+                                <span>{{currentNumber}}</span>
+                            </div>
+                        </ion-col>
+                        <ion-col col-4 text-center>
+                            <button ion-button item-end color="orange" (click)="increment()">
+                            <ion-icon name="add-circle" style="zoom:1.4;"></ion-icon>
+                        </button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12>
+                            <div text-center>
+                                <textarea rows="4" cols="40" [(ngModel)]="nota" formControlName="nota" placeholder="Describe el producto."></textarea>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-4 text-center>
+                            <button ion-button color="orange" round (click)="goBack()"><ion-icon name="close"></ion-icon></button>
+                        </ion-col>
+                        <ion-col col-4 text-center>
+                        </ion-col>
+                        <ion-col col-4 text-center>
+                            <div *ngIf="this.idx != undefined">
+                                <button ion-button color="aceptar" (click)="modificar_producto(currentNumber, nota, idx)" round [disabled]="!myForm.valid">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </button>
+                            </div>
+                            <div *ngIf="this.idx == undefined">
+                                <button ion-button color="aceptar" (click)="agregar_producto(currentNumber, nota)" round [disabled]="!myForm.valid">
+                                    <ion-icon name="checkmark"></ion-icon>
+                                </button>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-grid>
+        </div>
+    </div>
+
+</ion-content>

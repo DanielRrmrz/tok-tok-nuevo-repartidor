@@ -1,0 +1,111 @@
+page-delivery-tracking {
+    #google-v1 {
+        overflow-y: hidden;
+        #order-info {
+            height: 15%;
+            background: $orange;
+            .grid {
+                padding: 0px !important;
+                .dot-left {
+                    color: #fff;
+                    font-size: 25px;
+                    left: 25px;
+                    text-align: center;
+                }
+                .dot-right {
+                    color: #fff;
+                    font-size: 25px;
+                    right: 25px;
+                    text-align: center;
+                }
+                .custom-row {
+                    margin-top: 2%;
+                    color: #fff;
+                    font-weight: bold;
+                    .col {
+                        padding-right: 7%;
+                        color: #efefef;
+                    }
+                }
+            }
+        }
+        #track-info {
+            width: 100%;
+            height: 15%;
+            display: inline-block;
+            .track-title {
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .track-des {
+                text-align: center;
+                color: #343434;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 2px;
+            }
+        }
+        #map {
+            width: 100%;
+            height: 70%;
+        }
+        #delivery-details {
+            height: auto;
+            width: 100%;
+            margin-left: 0%;
+            position: fixed;
+            // bottom: 3%;
+            overflow: hidden;
+            background-color: #c8c7cc;
+            -webkit-box-shadow: -2px -6px 94px -18px #c8c7cc;
+            -moz-box-shadow: -2px -6px 94px -18px #c8c7cc;
+            box-shadow: -2px -6px 94px -18px #c8c7cc;
+            border-radius: 5px;
+            // border: 1px solid #000000;
+            .left {
+                width: 60%;
+                padding-left: 5%;
+                .title {
+                    font-size: 14px;
+                    color: #d0340f;
+                    font-weight: bold;
+                }
+            }
+            .right {
+                width: 40%;
+                line-height: 10px;
+                padding-top: 2%;
+                padding-left: 2%;
+                border-left: 1px solid #333;
+            }
+        }
+        // #right-panel {
+        //     font-family: 'Roboto', 'sans-serif';
+        //     line-height: 30px;
+        //     /* padding-left: 10px; */
+        // }
+        // #right-panel select,
+        // #right-panel input {
+        //     font-size: 15px;
+        // }
+        // #right-panel select {
+        //     width: 100%;
+        // }
+        // #right-panel i {
+        //     font-size: 12px;
+        // }
+        // #right-panel {
+        //     /* float: right; */
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        // .panel {
+        //     height: 100%;
+        //     overflow: auto;
+        // }
+    }
+    agm-map {
+        height: 400px;
+    }
+}

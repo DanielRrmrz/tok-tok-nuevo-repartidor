@@ -1,0 +1,275 @@
+{
+  "LANGUAGE": "Arabic Language",
+  "SIDEBAR_List": [
+    {
+      "NAME": "الصفحة المقصودة",
+      "COMPONENT": "FirstLandingPage",
+      "ICON": "home"
+    },
+    {
+      "NAME": "معلومات التسليم",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "information"
+    },
+    {
+      "NAME": "فئات الغذاء",
+      "COMPONENT": "FoodCategoriesPage",
+      "ICON": "keypad"
+    },
+    {
+      "NAME": "عربة التسوق",
+      "COMPONENT": "CartPage",
+      "ICON": "cart"
+    },
+    {
+      "NAME": "تأكيد التسليم",
+      "COMPONENT": "DeliveryConfirmationPage",
+      "ICON": "basket"
+    },
+    {
+      "NAME": "دفع",
+      "COMPONENT": "PaymentPage",
+      "ICON": "flame"
+    },
+    {
+      "NAME": "تتبع التسليم",
+      "COMPONENT": "DeliveryTrackingPage",
+      "ICON": "paper-plane"
+    },
+    {
+      "NAME": "إعدادات",
+      "COMPONENT": "SettingsPage",
+      "ICON": "settings"
+    },
+    {
+      "NAME": "اتصل",
+      "COMPONENT": "ContactPage",
+      "ICON": "contact"
+    },
+    {
+      "NAME": "معلومات عنا",
+      "COMPONENT": "AboutUsPage",
+      "ICON": "information-circle"
+    }
+  ],
+  "LANGUAGES": [
+    {
+      "ID": "ar",
+      "VALUE": "عربى"
+    },
+    {
+      "ID": "bn",
+      "VALUE": "البنغالية"
+    },
+    {
+      "ID": "en",
+      "VALUE": "الإنجليزية"
+    },
+    {
+      "ID": "es",
+      "VALUE": "الأسبانية"
+    },
+    {
+      "ID": "fr",
+      "VALUE": "الفرنسية"
+    },
+    {
+      "ID": "it",
+      "VALUE": "الإيطالي"
+    },
+    {
+      "ID": "ja",
+      "VALUE": "اليابانية"
+    },
+    {
+      "ID": "pt",
+      "VALUE": "البرتغالية"
+    },
+    {
+      "ID": "zh",
+      "VALUE": "صينى"
+    }
+  ],
+  "FIRST_LANDING_PAGE": {
+    "TITLE": "الغذاء تسليم التطبيق",
+    "BUTTON": "أدخل"
+  },
+  "SECOND_LANDING_PAGE": {
+    "TITLE": "اختر لغتك",
+    "DROPDOWN_LABEL": "اختار اللغة",
+    "BUTTON": "اذهب"
+  },
+  "USER_INFORMATION": {
+    "TITLE": "معلوماتك",
+    "WELCOME": "مرحبا بكم في يونيكبوكيت",
+    "SUBTITLE": "مرحبا بكم في يونيكبوكيت",
+    "BUTTON": "اذهب"
+  },
+  "FOOD_CATEGORIES": {
+    "TITLE": "قائمة طعام",
+    "BURGER": "برغر",
+    "PIZZA": "بيتزا",
+    "SNACKS": "وجبات خفيفة",
+    "CHINESS": "صينى",
+    "SALADS": "سلطة",
+    "DESSERTS": "الحلويات",
+    "ICECREAMS": "مثلجات",
+    "COFFEE": "قهوة"
+  },
+  "FOOD_ITEMS": {
+    "TITLE": "العناصر",
+    "BURGER": [
+      {
+        "NAME": "Double Cheese Burger (Beef)",
+        "DESCRIPTION": "Beef patty, sausage gravy, beef bacon, cheese ",
+        "PRICE": "$100"
+      },
+      {
+        "NAME": "Quarter Pounder (Beef)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Double Quarter Pounder (Beef)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce ",
+        "PRICE": "$150"
+      },
+      {
+        "NAME": "Double Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$180"
+      },
+      {
+        "NAME": "Quarter Pounder (Chicken)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$120"
+      },
+      {
+        "NAME": "Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$160"
+      },
+      {
+        "NAME": "Mighty Spicy Chic",
+        "DESCRIPTION": "Chicken patty X 2, beef bacon, cheese, naga blast sauce",
+        "PRICE": "$190"
+      },
+      {
+        "NAME": "Roast Chicken Poutine",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$250"
+      }
+    ],
+    "PIZZA": [
+      {
+        "NAME": "Chicken BBQ Pizza",
+        "DESCRIPTION": "Chicken breast with BBQ sauce",
+        "PRICE": "$600"
+      },
+      {
+        "NAME": "Pizza Margarita",
+        "DESCRIPTION": "Pizza Margarita",
+        "PRICE": "$700"
+      }
+    ],
+    "SNACKS": [
+      {
+        "NAME": "Chocolate Custard",
+        "DESCRIPTION": "Delicious combination of chocolate and rich custard",
+        "PRICE": "$500"
+      },
+      {
+        "NAME": "Dazzled",
+        "DESCRIPTION": "Intense dark chocolate with a milk chocolate pudding filling",
+        "PRICE": "$200"
+      }
+    ],
+    "CHINESS": [
+      {
+        "NAME": "Chicken Corn Soup",
+        "DESCRIPTION": "Corn, egg, butter, salt, pepper in clear chicken broth",
+        "PRICE": "$400"
+      },
+      {
+        "NAME": "Chicken Drumsticks",
+        "DESCRIPTION": "Chicken leg prepared with sauce,a blend of spices & special crunchy topping",
+        "PRICE": "$550"
+      }
+    ],
+    "SALADS": [
+      {
+        "NAME": "Chicken Salad",
+        "DESCRIPTION": "Roasted chicken with blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Prawn Salad",
+        "DESCRIPTION": "Roasted prawn with a blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$300"
+      }
+    ],
+    "DESSERTS": [
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$200"
+      }
+    ],
+    "ICECREAMS": [
+      {
+        "NAME": "Strawberry Shortcake",
+        "DESCRIPTION": "French vanilla icecream,strawberry filling,vanilla sponge cake,caramel fudge",
+        "PRICE": "$260"
+      },
+      {
+        "NAME": "Mocha Fudge Temptation",
+        "DESCRIPTION": "Chocolate icecream,coffee icecream,brownies,expresso powder,chocolate fudge",
+        "PRICE": "$500"
+      }
+    ],
+    "COFFEE": [
+      {
+        "NAME": "Americano",
+        "DESCRIPTION": "Americano",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Cold Coffee",
+        "DESCRIPTION": "Cold Coffee",
+        "PRICE": "$400"
+      }
+    ]
+  },
+  "CART": {
+    "TITLE": "طلبك",
+    "BUTTON": "ترتيب العملية"
+  },
+  "DELIVERY_CONFIRMATION": {
+    "TITLE": "عنوان التسليم",
+    "BUTTON": "طلب"
+  },
+  "PAYMENT": {
+    "TITLE": "دفع",
+    "BUTTON": "دفع"
+  },
+  "DELIVERY_TRACKING": {
+    "TITLE": "أتبع طلبك"
+  },
+  "SETTINGS": {
+    "TITLE": "إعدادات"
+  },
+  "CONTACTUS": {
+    "TITLE": "اتصل بنا"
+  },
+  "ABOUTUS": {
+    "TITLE": "معلومات عنا"
+  },
+  "ITEM_DETAILS": {
+    "BUTTON": "أضف إلى السلة"
+  }
+}

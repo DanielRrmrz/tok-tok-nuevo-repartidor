@@ -1,0 +1,97 @@
+<ion-header no-border>
+    <ion-navbar color="orange" hideBackButton>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                </ion-col>
+                <ion-col col-8>
+                    <ion-title>Detalles del Cliente</ion-title>
+                </ion-col>
+                <ion-col col-2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <!-- {{service.uidCliente}} deef -->
+    <ion-card>
+
+        <img class="photo" src="{{service.photoUsuario}}?type=large&width=720&height=720" />
+
+
+        <ion-card-title style="text-align: center;">
+            {{service.nombreUsuario}}
+        </ion-card-title>
+        <div *ngIf="totalSer<1; else other_content">
+            <ion-row class="grid-3 grid-example">
+                <ion-col class="grid-item" text-center>
+                    <div class="grid-item-wrapper">
+                        <div class="grid-item-inner">
+                            {{totalSer}}
+                        </div>
+                    </div>
+                    <b>Nuevo Usuario</b>
+                </ion-col>
+            </ion-row>
+        </div>
+        <ng-template #other_content>
+            <ion-row class="grid-3 grid-example">
+                <ion-col class="grid-item" text-center>
+                    <div class="grid-item-wrapper">
+                        <div class="grid-item-inner">
+                            {{totalSer}}
+                        </div>
+                    </div>
+                    <b>Total de Servicios</b>
+                </ion-col>
+            </ion-row>
+        </ng-template>
+        <ion-card-content>
+            <ion-row class="grid-3 grid-example1">
+                <ion-col class="grid-item1" text-center>
+                    <div class="grid-item-wrapper1">
+                        <div class="grid-item-inner1">
+                            {{servCancelados}}
+                        </div>
+                    </div>
+                    <b>Cancelados</b>
+                </ion-col>
+                <ion-col class="grid-item2" text-center>
+                    <div class="grid-item-wrapper2">
+                        <div class="grid-item-inner2">
+                            {{servCompletados}}
+                        </div>
+                    </div>
+                    <b>Completados</b>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-col text-center>
+                <button ion-button color="dark" round (click)="goBack()" style="padding: 10px;">
+                    <ion-icon name="close"></ion-icon>&emsp;Cerrar
+                </button>
+            </ion-col>
+            <ion-col text-center>
+                <button ion-button color="orange" (click)="aceptarServicio()" round style="padding: 10px;">
+                            <ion-icon name="checkmark"></ion-icon>&emsp;Aceptar
+                </button>
+            </ion-col>
+        </ion-row>
+        <!-- </ion-row> -->
+
+    </ion-card>
+
+    <!-- <div *ngFor="let pedido of pedidos; let i = index">
+        Key: {{pedido.key}}
+
+
+        <button ion-button color="aceptar" (click)="getProductos(pedido.key)" round>Más detalles
+      <ion-icon name="checkmark"></ion-icon>
+  </button>
+    </div> -->
+</ion-content>

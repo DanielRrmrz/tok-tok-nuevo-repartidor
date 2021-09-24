@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="orange">
+    <ion-row>
+        <ion-col col-2>
+            <ion-buttons>
+                <button ion-button icon-only (click)="goBack()">
+                    <ion-icon name="arrow-dropdown"></ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-col>
+        <ion-col col-8 text-center>
+            <ion-title>Ganancias del día</ion-title>
+        </ion-col>
+    </ion-row>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="res == true">
+    <ion-item>
+      <ion-row>        
+      <ion-col text-center class="text">
+        <b>{{totalRepa | currency}}</b>
+      </ion-col>
+      </ion-row>
+        <ion-row>
+            <ion-col text-center>Servicios: <b>{{servicios.length}}</b></ion-col>
+        </ion-row>
+    </ion-item>
+    <br><br>
+    <ion-list>
+      <ion-item ion-item *ngFor="let servicio of servicios">        
+        <ion-row>
+          <ion-col>
+            <b> Servicio </b>
+          </ion-col>
+          <ion-col>#{{ servicio.clave }}</ion-col>
+          <ion-col>
+            <b>Fecha</b>
+          </ion-col>
+          <ion-col text-right>{{ servicio.fecha | date:'dd/MM/yyyy'}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           <b> Total del Pedido:</b>
+          </ion-col>
+          <ion-col text-right>
+            {{ servicio.totalFinal | currency}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           <b> Total del Servicio:</b>
+          </ion-col>
+          <ion-col text-right>
+            {{ servicio.comisionServicio | currency}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           <b> Comisión TocToc:</b>
+          </ion-col>
+          <ion-col text-right>
+            {{ servicio.corteBme | currency}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+           <b> Ganancia:</b>
+          </ion-col>
+          <ion-col text-right>
+            {{ servicio.corteRep | currency}}
+          </ion-col>
+        </ion-row>
+      </ion-item>
+  </ion-list>
+</div>
+<div *ngIf="res == false">
+  <ion-col text-center>
+      <h2><b>No se encontraron servicios</b></h2>
+  </ion-col>
+</div>
+
+</ion-content>

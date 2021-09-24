@@ -1,0 +1,275 @@
+{
+  "LANGUAGE": "Japanese Language",
+  "SIDEBAR_List": [
+    {
+      "NAME": "ランディングページ",
+      "COMPONENT": "FirstLandingPage",
+      "ICON": "home"
+    },
+    {
+      "NAME": "配送情報",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "information"
+    },
+    {
+      "NAME": "食品カテゴリー",
+      "COMPONENT": "FoodCategoriesPage",
+      "ICON": "keypad"
+    },
+    {
+      "NAME": "カート",
+      "COMPONENT": "CartPage",
+      "ICON": "cart"
+    },
+    {
+      "NAME": "配送の確認",
+      "COMPONENT": "DeliveryConfirmationPage",
+      "ICON": "basket"
+    },
+    {
+      "NAME": "支払い",
+      "COMPONENT": "PaymentPage",
+      "ICON": "flame"
+    },
+    {
+      "NAME": "配信トラッキング",
+      "COMPONENT": "DeliveryTrackingPage",
+      "ICON": "paper-plane"
+    },
+    {
+      "NAME": "設定",
+      "COMPONENT": "SettingsPage",
+      "ICON": "settings"
+    },
+    {
+      "NAME": "接触",
+      "COMPONENT": "ContactPage",
+      "ICON": "contact"
+    },
+    {
+      "NAME": "私たちに関しては",
+      "COMPONENT": "AboutUsPage",
+      "ICON": "information-circle"
+    }
+  ],
+  "LANGUAGES": [
+    {
+      "ID": "ar",
+      "VALUE": "アラビア語"
+    },
+    {
+      "ID": "bn",
+      "VALUE": "バングラ"
+    },
+    {
+      "ID": "en",
+      "VALUE": "英語"
+    },
+    {
+      "ID": "es",
+      "VALUE": "スペイン語"
+    },
+    {
+      "ID": "fr",
+      "VALUE": "フランス語"
+    },
+    {
+      "ID": "it",
+      "VALUE": "イタリアの"
+    },
+    {
+      "ID": "ja",
+      "VALUE": "日本語"
+    },
+    {
+      "ID": "pt",
+      "VALUE": "ポルトガル語"
+    },
+    {
+      "ID": "zh",
+      "VALUE": "中国語"
+    }
+  ],
+  "FIRST_LANDING_PAGE": {
+    "TITLE": "食品配送アプリ",
+    "BUTTON": "入る"
+  },
+  "SECOND_LANDING_PAGE": {
+    "TITLE": "言語を選んでください",
+    "DROPDOWN_LABEL": "言語を選択する",
+    "BUTTON": "GO"
+  },
+  "USER_INFORMATION": {
+    "TITLE": "あなたの情報",
+    "WELCOME": "イオニックバケットにようこそ",
+    "SUBTITLE": "あなたの情報を与える",
+    "BUTTON": "行こう"
+  },
+  "FOOD_CATEGORIES": {
+    "TITLE": "メニュー",
+    "BURGER": "バーガー",
+    "PIZZA": "ピザ",
+    "SNACKS": "スナック",
+    "CHINESS": "中国語",
+    "SALADS": "サラダ",
+    "DESSERTS": "デザート",
+    "ICECREAMS": "アイスクリーム",
+    "COFFEE": "コーヒー"
+  },
+  "FOOD_ITEMS": {
+    "TITLE": "アイテム",
+    "BURGER": [
+      {
+        "NAME": "Double Cheese Burger (Beef)",
+        "DESCRIPTION": "Beef patty, sausage gravy, beef bacon, cheese ",
+        "PRICE": "$100"
+      },
+      {
+        "NAME": "Quarter Pounder (Beef)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Double Quarter Pounder (Beef)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce ",
+        "PRICE": "$150"
+      },
+      {
+        "NAME": "Double Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$180"
+      },
+      {
+        "NAME": "Quarter Pounder (Chicken)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$120"
+      },
+      {
+        "NAME": "Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$160"
+      },
+      {
+        "NAME": "Mighty Spicy Chic",
+        "DESCRIPTION": "Chicken patty X 2, beef bacon, cheese, naga blast sauce",
+        "PRICE": "$190"
+      },
+      {
+        "NAME": "Roast Chicken Poutine",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$250"
+      }
+    ],
+    "PIZZA": [
+      {
+        "NAME": "Chicken BBQ Pizza",
+        "DESCRIPTION": "Chicken breast with BBQ sauce",
+        "PRICE": "$600"
+      },
+      {
+        "NAME": "Pizza Margarita",
+        "DESCRIPTION": "Pizza Margarita",
+        "PRICE": "$700"
+      }
+    ],
+    "SNACKS": [
+      {
+        "NAME": "Chocolate Custard",
+        "DESCRIPTION": "Delicious combination of chocolate and rich custard",
+        "PRICE": "$500"
+      },
+      {
+        "NAME": "Dazzled",
+        "DESCRIPTION": "Intense dark chocolate with a milk chocolate pudding filling",
+        "PRICE": "$200"
+      }
+    ],
+    "CHINESS": [
+      {
+        "NAME": "Chicken Corn Soup",
+        "DESCRIPTION": "Corn, egg, butter, salt, pepper in clear chicken broth",
+        "PRICE": "$400"
+      },
+      {
+        "NAME": "Chicken Drumsticks",
+        "DESCRIPTION": "Chicken leg prepared with sauce,a blend of spices & special crunchy topping",
+        "PRICE": "$550"
+      }
+    ],
+    "SALADS": [
+      {
+        "NAME": "Chicken Salad",
+        "DESCRIPTION": "Roasted chicken with blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Prawn Salad",
+        "DESCRIPTION": "Roasted prawn with a blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$300"
+      }
+    ],
+    "DESSERTS": [
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$200"
+      }
+    ],
+    "ICECREAMS": [
+      {
+        "NAME": "Strawberry Shortcake",
+        "DESCRIPTION": "French vanilla icecream,strawberry filling,vanilla sponge cake,caramel fudge",
+        "PRICE": "$260"
+      },
+      {
+        "NAME": "Mocha Fudge Temptation",
+        "DESCRIPTION": "Chocolate icecream,coffee icecream,brownies,expresso powder,chocolate fudge",
+        "PRICE": "$500"
+      }
+    ],
+    "COFFEE": [
+      {
+        "NAME": "Americano",
+        "DESCRIPTION": "Americano",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Cold Coffee",
+        "DESCRIPTION": "Cold Coffee",
+        "PRICE": "$400"
+      }
+    ]
+  },
+  "CART": {
+    "TITLE": "ご注文",
+    "BUTTON": "プロセスオーダー"
+  },
+  "DELIVERY_CONFIRMATION": {
+    "TITLE": "お届け先住所",
+    "BUTTON": "注文"
+  },
+  "PAYMENT": {
+    "TITLE": "支払い",
+    "BUTTON": "支払う"
+  },
+  "DELIVERY_TRACKING": {
+    "TITLE": "あなたの注文を追跡する"
+  },
+  "SETTINGS": {
+    "TITLE": "設定"
+  },
+  "CONTACTUS": {
+    "TITLE": "お問い合わせ"
+  },
+  "ABOUTUS": {
+    "TITLE": "私たちに関しては"
+  },
+  "ITEM_DETAILS": {
+    "BUTTON": "カートに追加"
+  }
+}

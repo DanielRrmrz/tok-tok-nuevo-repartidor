@@ -1,0 +1,163 @@
+page-detalleservicio {
+    .photo {
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .caja {
+        overflow: hidden;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        font-size: 2.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0.4rem 0.2rem;
+        padding: 1px 1px;
+        // margin-left: 20px;
+        color: #000000;
+        background-color: #d0330f;
+    }
+    .grid-example {
+        padding: 0px 0px 0px 0px;
+        flex-wrap: wrap;
+        .grid-item {
+            // padding: 20px 4.5px 5px 1px;
+            padding: 0% 0% 0%;
+            &>.double-item {
+                &>.grid-item {
+                    padding: 0px 0px;
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+                    &:last-child {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            .grid-item-wrapper {
+                position: relative;
+                padding-bottom: 0px;
+                height: 100px;
+                width: 100px;
+                border-radius: 100px 100px 100px 100px;
+                border: #d0330f 3px solid;
+                background-color: rgb(255, 252, 248);
+                margin-left: auto;
+                margin-right: auto;
+                .grid-item-inner {
+                    font-size: 25px;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &.multi-line {
+                        flex-wrap: wrap;
+                        .item-title {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            margin: 5px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .grid-example1 {
+        padding: 0px 0px 0px 0px;
+        flex-wrap: wrap;
+        .grid-item1 {
+            // padding: 20px 4.5px 5px 1px;
+            padding: 0% 0% 0%;
+            &>.double-item1 {
+                &>.grid-item1 {
+                    padding: 0px 0px;
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+                    &:last-child {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            .grid-item-wrapper1 {
+                position: relative;
+                padding-bottom: 0px;
+                height: 50px;
+                width: 50px;
+                border-radius: 100px 100px 100px 100px;
+                border: #E3E2E2 3px solid;
+                background-color: #E3E2E2;
+                margin-left: auto;
+                margin-right: auto;
+                .grid-item-inner1 {
+                    font-size: 15px;
+                    color: #000000;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &.multi-line {
+                        flex-wrap: wrap;
+                        .item-title {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            margin: 5px 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .grid-item2 {
+            // padding: 20px 4.5px 5px 1px;
+            padding: 0% 0% 0%;
+            &>.double-item2 {
+                &>.grid-item2 {
+                    padding: 0px 0px;
+                    &:first-child {
+                        padding-top: 0px;
+                    }
+                    &:last-child {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            .grid-item-wrapper2 {
+                position: relative;
+                padding-bottom: 0px;
+                height: 50px;
+                width: 50px;
+                border-radius: 100px 100px 100px 100px;
+                border: #f27627 3px solid;
+                background-color: #f27627;
+                margin-left: auto;
+                margin-right: auto;
+                .grid-item-inner2 {
+                    font-size: 15px;
+                    color: #000000;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &.multi-line {
+                        flex-wrap: wrap;
+                        .item-title {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                            margin: 5px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2017
+  - @license   Fulcrumy
+-->
+<!-- Second Landing Page -->
+
+<ion-content>
+    <div class="background">
+        <div class="contents">
+            <div class="animated fadeInUp">
+                <p>{{'SECOND_LANDING_PAGE.TITLE' | translate}}</p>
+                <ion-item class="select-box" color="orange">
+                    <ion-label>{{'SECOND_LANDING_PAGE.DROPDOWN_LABEL' | translate}}</ion-label>
+                    <ion-select [(ngModel)]="language" (ionChange)="chooseLanguage(language)">
+                        <ion-option [selected]="language.ID == 'en'" *ngFor="let language of languages; let i=index" [value]="'LANGUAGES.' + i + '.ID' | translate">{{'LANGUAGES.' + i + '.VALUE' | translate}}</ion-option>
+                    </ion-select>
+                </ion-item>
+                <button ion-button round color="orange" (click)="gotoUserInfoPage()">{{'SECOND_LANDING_PAGE.BUTTON' | translate}}</button>
+            </div>
+        </div>
+    </div>
+</ion-content>

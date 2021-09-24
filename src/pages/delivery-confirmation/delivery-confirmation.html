@@ -1,0 +1,61 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2017
+  - @license   Fulcrumy
+-->
+<!-- Delivery Confirmation Page -->
+
+<ion-header no-border>
+  <ion-navbar color="orange" hideBackButton>
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>{{'DELIVERY_CONFIRMATION.TITLE' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">
+
+  <form [formGroup]="DeliveryInfoForm" novalidate class="animated zoomInUp">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+
+          <!-- Name -->
+          <ion-item>
+            <ion-input type="text" formControlName="name" placeholder="Name*" [(ngModel)]="DeliveryInfoForm.name"></ion-input>
+          </ion-item>
+
+          <!-- Mobile Number -->
+          <ion-item>
+            <ion-input type="number" formControlName="mobile" placeholder="Mobile Number*" [(ngModel)]="DeliveryInfoForm.mobile"></ion-input>
+          </ion-item>
+
+          <!-- Location Address1  -->
+          <ion-item>
+            <ion-input type="text" formControlName="locationAddress1" placeholder="Location Address 1*" [(ngModel)]="DeliveryInfoForm.locationAddress1"></ion-input>
+          </ion-item>
+
+          <!-- Location Address2  -->
+          <ion-item>
+            <ion-input type="text" formControlName="locationAddress2" placeholder="Location Address 2*" [(ngModel)]="DeliveryInfoForm.locationAddress1"></ion-input>
+          </ion-item>
+
+          <!-- Date Time -->
+          <ion-item>
+            <ion-datetime formControlName="datetime" displayFormat="DD MMM, YYYY (HH:mm a)" placeholder="Date*" [(ngModel)]="DeliveryInfoForm.datetime"></ion-datetime>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <!-- Button  -->
+    <ion-row>
+      <ion-col>
+        <button ion-button round color="orange" (click)="gotoPaymentPage()">{{'DELIVERY_CONFIRMATION.BUTTON' | translate}}</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header no-border>
+    <ion-navbar color="orange">
+        <ion-row>
+            <ion-col col-2>
+                <ion-buttons>
+                    <button ion-button icon-only (click)="goBack()">
+                        <ion-icon name="arrow-dropdown"></ion-icon>
+                    </button>
+                </ion-buttons>
+            </ion-col>
+            <ion-col col-8 text-center>
+                <ion-title>{{'DELIVERY_TRACKING.TITLE1' | translate}}</ion-title>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<ion-content id="google-v1">
+    <agm-map [zoom]="zoom" [latitude]="latIni" [longitude]="lngIni" [styles]="MapStyle">
+        <!-- <agm-marker [latitude]="latIni" [longitude]="lngIni"></agm-marker> -->
+        <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination" [panel]="setPanel()" [renderOptions]="renderOptions" [markerOptions]="markerOptions">
+        </agm-direction>
+    </agm-map>
+    <div id="myPanel"></div>
+</ion-content>

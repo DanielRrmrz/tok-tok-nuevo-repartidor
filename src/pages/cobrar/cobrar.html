@@ -1,0 +1,163 @@
+<ion-header no-border>
+    <ion-navbar color="orange" hideBackButton>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                    <!-- <ion-buttons>
+                        <button ion-button icon-only (click)="goBack()">
+                          <ion-icon name="arrow-dropdown"></ion-icon>
+                      </button>
+                    </ion-buttons> -->
+                </ion-col>
+                <ion-col col-8 text-center>
+                    <ion-title>Resumen de Pago</ion-title>
+                </ion-col>
+                <ion-col col-2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card class="borde">
+        <ion-card-content>
+            <ion-row>
+                <ion-col text-center>
+                    <h2><b> Servicio:
+                    <label class="color"> #{{servicio.clave}}</label></b>
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="borde">
+        <ion-card-content>
+            <ion-row>
+                <ion-col>
+                    <h2><b> Método de pago:</b></h2>
+                </ion-col>
+                <ion-col text-right>
+                    <b>{{servicio.metodo_pago}}</b>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+    <!-- <div *ngFor="let pedido of pedidos">
+        <-- <ion-card-content> --
+        <ion-card>
+            <ion-card-content>
+                <ion-row no-padding>
+                    <ion-col>
+                        <h2><b>{{pedido.nombreLocal}}</b></h2>
+
+                    </ion-col>
+                    <ion-col text-right>
+                        Total: <b>{{pedido.total | currency}}</b>
+                    </ion-col>
+
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+
+    </div> -->
+    <ion-card class="borde">
+        <ion-card-content>
+            <div *ngIf="totalFinal <= 0 || !totalFinal">
+                <div text-center>
+                    <h2>Cargando recibo</h2>
+                </div>
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+            <div *ngIf="totalFinal > 0">
+                <ion-row>
+                    <ion-col>
+                        <h2><b><label class="gris"> Recibo del pedido</label></b></h2>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Total del pedido:
+                    </ion-col>
+                    <ion-col text-right>
+                        <b> {{totalProd | currency}}</b>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Costo del servicio:
+                    </ion-col>
+                    <ion-col text-right>
+                        <b>{{comisionServicio | currency}}</b>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        Establecimientos Adicionales <b>({{totalLugares}})</b>:
+                    </ion-col>
+                    <ion-col col-3 text-right>
+                        <b>{{recargos | currency}}</b>
+                    </ion-col>
+                </ion-row>
+                <ion-row [hidden]="servicio.metodo_pago != 'Tarjeta'">
+                    <ion-col>
+                        Comision: <br>(pago tarjeta)
+                    </ion-col>
+                    <ion-col text-right>
+                        <b>{{totComision | currency}}</b>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        TOTAL:
+                    </ion-col>
+                    <ion-col text-right>
+                        <b>{{totalFinal | currency}}</b>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-grid>
+        <div [hidden]="servicio.metodo_pago != 'Efectivo'">
+            <button ion-button color="orange" (click)="finalizar()" full round>            
+                    Finalizar Servicio
+            </button>
+        </div>
+    </ion-grid>
+
+    <ion-grid>
+        <div [hidden]="servicio.metodo_pago != 'Tarjeta'">
+            <button ion-button color="orange" (click)="finalizarServicio(servicio.cardId)" full round>            
+                Finalizar Servicio
+            </button>    
+        </div>        
+    </ion-grid>
+
+    <ion-grid>
+            <button ion-button color="orange" (click)="cambiarMetodo(servicio.metodo_pago)" full round>            
+                    Cambiar forma de pago
+            </button>
+    </ion-grid>
+</ion-content>
+
+<ion-footer no-border>
+    <ion-row>
+        <ion-col text-center>
+            <button ion-button clear icon-only item-letf (click)="call(usuario.phone)">
+                <ion-icon name="call" ios="ios-call" md="md-call" color="orange"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col text-center>
+            <button ion-button clear icon-only item-right (click)="enviarMensage(usuario.username, usuario.lastname, servicio.playerIDUser)">
+                <ion-icon name="chatboxes" ios="ios-chatboxes" md="md-chatboxes" color="orange"></ion-icon>
+            </button>
+        </ion-col>
+    </ion-row>
+
+</ion-footer>

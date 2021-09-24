@@ -1,0 +1,23 @@
+page-masdetalles {
+    .photo {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .letra {
+        font-size: 2rem;
+    }
+    .name {
+        font-size: 1.7rem;
+    }
+    .title1 {
+        font-size: 2.5rem;
+    }
+    .title2 {
+        color: #f27627;
+        font-size: 1.5rem;
+    }
+}

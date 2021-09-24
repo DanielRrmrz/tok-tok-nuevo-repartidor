@@ -1,0 +1,275 @@
+{
+  "LANGUAGE": "Chinese Language",
+  "SIDEBAR_List": [
+    {
+      "NAME": "登陆页面",
+      "COMPONENT": "FirstLandingPage",
+      "ICON": "home"
+    },
+    {
+      "NAME": "交货信息",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "information"
+    },
+    {
+      "NAME": "食物类别",
+      "COMPONENT": "FoodCategoriesPage",
+      "ICON": "keypad"
+    },
+    {
+      "NAME": "大车",
+      "COMPONENT": "CartPage",
+      "ICON": "cart"
+    },
+    {
+      "NAME": "发货确认",
+      "COMPONENT": "DeliveryConfirmationPage",
+      "ICON": "basket"
+    },
+    {
+      "NAME": "付款",
+      "COMPONENT": "PaymentPage",
+      "ICON": "flame"
+    },
+    {
+      "NAME": "送货跟踪",
+      "COMPONENT": "DeliveryTrackingPage",
+      "ICON": "paper-plane"
+    },
+    {
+      "NAME": "设置",
+      "COMPONENT": "SettingsPage",
+      "ICON": "settings"
+    },
+    {
+      "NAME": "联系",
+      "COMPONENT": "ContactPage",
+      "ICON": "contact"
+    },
+    {
+      "NAME": "关于我们",
+      "COMPONENT": "AboutUsPage",
+      "ICON": "information-circle"
+    }
+  ],
+  "LANGUAGES": [
+    {
+      "ID": "ar",
+      "VALUE": "阿拉伯"
+    },
+    {
+      "ID": "bn",
+      "VALUE": "孟加拉"
+    },
+    {
+      "ID": "en",
+      "VALUE": "英语"
+    },
+    {
+      "ID": "es",
+      "VALUE": "西班牙语"
+    },
+    {
+      "ID": "fr",
+      "VALUE": "法国"
+    },
+    {
+      "ID": "it",
+      "VALUE": "意大利"
+    },
+    {
+      "ID": "ja",
+      "VALUE": "日本"
+    },
+    {
+      "ID": "pt",
+      "VALUE": "葡萄牙语"
+    },
+    {
+      "ID": "zh",
+      "VALUE": "中文"
+    }
+  ],
+  "FIRST_LANDING_PAGE": {
+    "TITLE": "食物交付应用程序",
+    "BUTTON": "输入"
+  },
+  "SECOND_LANDING_PAGE": {
+    "TITLE": "选择你的语言",
+    "DROPDOWN_LABEL": "选择语言",
+    "BUTTON": "走"
+  },
+  "USER_INFORMATION": {
+    "TITLE": "你的信息",
+    "WELCOME": "欢迎来到 IONICBUCKET",
+    "SUBTITLE": "给你的信息",
+    "BUTTON": "走"
+  },
+  "FOOD_CATEGORIES": {
+    "TITLE": "菜单",
+    "BURGER": "汉堡包",
+    "PIZZA": "比萨",
+    "SNACKS": "比萨",
+    "CHINESS": "中文",
+    "SALADS": "沙拉",
+    "DESSERTS": "甜品",
+    "ICECREAMS": "冰淇淋",
+    "COFFEE": "咖啡"
+  },
+  "FOOD_ITEMS": {
+    "TITLE": "项目",
+    "BURGER": [
+      {
+        "NAME": "Double Cheese Burger (Beef)",
+        "DESCRIPTION": "Beef patty, sausage gravy, beef bacon, cheese ",
+        "PRICE": "$100"
+      },
+      {
+        "NAME": "Quarter Pounder (Beef)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Double Quarter Pounder (Beef)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce ",
+        "PRICE": "$150"
+      },
+      {
+        "NAME": "Double Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$180"
+      },
+      {
+        "NAME": "Quarter Pounder (Chicken)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$120"
+      },
+      {
+        "NAME": "Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$160"
+      },
+      {
+        "NAME": "Mighty Spicy Chic",
+        "DESCRIPTION": "Chicken patty X 2, beef bacon, cheese, naga blast sauce",
+        "PRICE": "$190"
+      },
+      {
+        "NAME": "Roast Chicken Poutine",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$250"
+      }
+    ],
+    "PIZZA": [
+      {
+        "NAME": "Chicken BBQ Pizza",
+        "DESCRIPTION": "Chicken breast with BBQ sauce",
+        "PRICE": "$600"
+      },
+      {
+        "NAME": "Pizza Margarita",
+        "DESCRIPTION": "Pizza Margarita",
+        "PRICE": "$700"
+      }
+    ],
+    "SNACKS": [
+      {
+        "NAME": "Chocolate Custard",
+        "DESCRIPTION": "Delicious combination of chocolate and rich custard",
+        "PRICE": "$500"
+      },
+      {
+        "NAME": "Dazzled",
+        "DESCRIPTION": "Intense dark chocolate with a milk chocolate pudding filling",
+        "PRICE": "$200"
+      }
+    ],
+    "CHINESS": [
+      {
+        "NAME": "Chicken Corn Soup",
+        "DESCRIPTION": "Corn, egg, butter, salt, pepper in clear chicken broth",
+        "PRICE": "$400"
+      },
+      {
+        "NAME": "Chicken Drumsticks",
+        "DESCRIPTION": "Chicken leg prepared with sauce,a blend of spices & special crunchy topping",
+        "PRICE": "$550"
+      }
+    ],
+    "SALADS": [
+      {
+        "NAME": "Chicken Salad",
+        "DESCRIPTION": "Roasted chicken with blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Prawn Salad",
+        "DESCRIPTION": "Roasted prawn with a blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$300"
+      }
+    ],
+    "DESSERTS": [
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$200"
+      }
+    ],
+    "ICECREAMS": [
+      {
+        "NAME": "Strawberry Shortcake",
+        "DESCRIPTION": "French vanilla icecream,strawberry filling,vanilla sponge cake,caramel fudge",
+        "PRICE": "$260"
+      },
+      {
+        "NAME": "Mocha Fudge Temptation",
+        "DESCRIPTION": "Chocolate icecream,coffee icecream,brownies,expresso powder,chocolate fudge",
+        "PRICE": "$500"
+      }
+    ],
+    "COFFEE": [
+      {
+        "NAME": "Americano",
+        "DESCRIPTION": "Americano",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Cold Coffee",
+        "DESCRIPTION": "Cold Coffee",
+        "PRICE": "$400"
+      }
+    ]
+  },
+  "CART": {
+    "TITLE": "你的订单",
+    "BUTTON": "流程订单"
+  },
+  "DELIVERY_CONFIRMATION": {
+    "TITLE": "您的送货地址",
+    "BUTTON": "订购"
+  },
+  "PAYMENT": {
+    "TITLE": "付款",
+    "BUTTON": "工资"
+  },
+  "DELIVERY_TRACKING": {
+    "TITLE": "Track Your Order"
+  },
+  "SETTINGS": {
+    "TITLE": "设置"
+  },
+  "CONTACTUS": {
+    "TITLE": "联系我们"
+  },
+  "ABOUTUS": {
+    "TITLE": "关于我们"
+  },
+  "ITEM_DETAILS": {
+    "BUTTON": "添加到购物车"
+  }
+}

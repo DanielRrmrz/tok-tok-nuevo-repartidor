@@ -1,0 +1,67 @@
+<ion-menu [content]="content" *ngIf="this.platform.dir()==='ltr'" side="left">
+    <ion-header>
+        <ion-toolbar>
+            <img class="logo animated fadeInDown" src="assets/imgs/logo_.png" style="border-radius: 0%;">
+        </ion-toolbar>
+    </ion-header>
+    <!-- Side Menu Content Options -->
+    <ion-content>
+
+        <ion-list no-lines>
+            <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage('HomePage')">
+                <ion-icon ion-text color="ash" name="home" item-left></ion-icon>
+                <span ion-text color="ash">Inicio</span>
+            </ion-item>
+
+            <ion-item menuClose (click)="openPage('HistorialPage')">
+                <ion-icon ion-text color="ash" name="filing" item-left></ion-icon>
+                <span ion-text color="ash">Servicios</span>
+            </ion-item>
+            <ion-item menuClose (click)="openPage('GananciasPage')">
+                <ion-icon ion-text color="ash" name="filing" item-left></ion-icon>
+                <span ion-text color="ash">Reporte Ganancias</span>
+            </ion-item>
+            <ion-item menuClose (click)="openPage('TerminosPage')">
+                <ion-icon ion-text color="ash" name="information-circle" item-left></ion-icon>
+                <span ion-text color="ash">Terminos y condiciones</span>
+            </ion-item>
+            <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">
+                <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>
+                <span ion-text color="ash">{{'SIDEBAR_List.' + i + '.NAME' | translate}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-menu [content]="content" *ngIf="this.platform.dir()!=='ltr'" side="right">
+    <ion-header>
+        <ion-toolbar>
+            <img class="logo animated fadeInDown" src="assets/imgs/logo-icon.png">
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage('HomePage')">
+            <ion-icon ion-text color="ash" name="home" item-left></ion-icon>
+            <span ion-text color="ash">Inicio</span>
+        </ion-item>
+
+        <ion-list no-lines>
+            <ion-item menuClose (click)="openPage('HistorialPage')">
+                <ion-icon ion-text color="ash" name="filing" item-left></ion-icon>
+                <span ion-text color="ash">Servicios</span>
+            </ion-item>
+            <ion-item menuClose (click)="openPage('ReportePage')">
+                <ion-icon ion-text color="ash" name="filing" item-left></ion-icon>
+                <span ion-text color="ash">Generar Reporte</span>
+            </ion-item>
+            <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">
+                <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>
+                <span ion-text color="ash">{{'SIDEBAR_List.' + i + '.NAME' | translate}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

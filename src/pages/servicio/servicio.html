@@ -1,0 +1,401 @@
+<ion-header no-border>
+
+    <ion-navbar color="orange" hideBackButton>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                    <!-- <ion-buttons>
+                        <button ion-button icon-only (click)="goBack()">
+                            <ion-icon name="arrow-dropdown"></ion-icon>
+                        </button>
+                    </ion-buttons> -->
+                </ion-col>
+                <ion-col col-8 text-center>
+                    <ion-title>Servicio</ion-title>
+                </ion-col>
+                <ion-col col-2>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div *ngIf="tipo==1">
+        <ion-grid>
+            <ion-card class="borde">
+                <ion-card-content>
+                    <ion-row>
+                        <ion-col class="letra">
+                            <b>Servicio</b>
+                        </ion-col>
+                        <ion-col class="letra" col-4 text-right>
+                            <b> {{servicio.clave}}</b>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <!-- ID del Cliente en el servicio: {{servicio.uidCliente}} -->
+                        <ion-col>
+                            <!-- ID del Cliente en la consulta: {{cliente.uid}} <br><br><br><br>  -->
+                            <b> ClIENTE Y DIRECCIÓN</b>
+                            <br> {{servicio.nombreUsuario}}
+                            <br> {{servicio.entregaDir}}
+                            <br> {{servicio.apto}} <br>
+                            <b>Método de Pago:</b> {{servicio.metodo_pago}}
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+                <ion-row>
+                    <br><br>
+                    <ion-col text-center>
+                        <button ion-button color="orange" (click)="abrirMapa(lat,lng)" class="boton1" round>
+                            <div class="eye">
+                                <ion-icon ios="ios-pin" md="md-pin"></ion-icon> Mapa
+                            </div>
+                        </button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button color="orange" (click)="cancelarServicio(servicio.playerIDUser, username);" class="boton1" round>
+                            <div class="eye">
+                                <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon> Cancelar
+                            </div>
+                        </button>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+
+            <br>
+            <div *ngFor="let pedido of pedidos">
+                <!-- <ion-card-content> -->
+                <ion-card class="borde">
+                    <ion-card-content>
+                        <ion-row no-padding>
+                            <ion-col>
+                                <h2><b>{{pedido.nombreLocal}}</b></h2> <br>
+                                <div *ngFor="let producto of productos">
+                                    <div *ngIf="pedido.$key==producto.pedidoID">
+                                        <b>({{producto.cantidad}})</b>&emsp;&emsp;<b>{{producto.producto}}</b> <br> {{producto.descripcion}}
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="dir">
+                                    {{pedido.direccionLocal}}
+                                </div>
+                            </ion-col>
+
+                            <ion-col col-3>
+                                <div *ngIf="servicio.favor == false">
+                                    <!-- <button ion-button color="orange" (click)="abrirMapa(pedido.pedidoGeo._lat,pedido.pedidoGeo._long)" round>
+                                        <div class="eye">
+                                            <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+                                        </div>
+                                    </button> -->
+                                </div>
+                                <br><br>
+                                <div [hidden]="pedido.estatus=='true'" (click)="mostrarModal(pedido.$key,servicio.numTikets, 'PV')">
+                                    <img class="image" src="assets/imgs/ticket.png">
+                                </div>
+                                <div [hidden]="pedido.estatus!='true'" (click)="mostrarModal(pedido.$key, servicio.numTikets, 'SV')">
+                                    <img class="image" src="assets/imgs/ticblock.png">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card-content>
+                </ion-card>
+
+            </div>
+            <ion-row [hidden]="servicio.estatus=='EnPuerta'">
+                <ion-col>
+                    <ion-card class="borde">
+                        <div *ngIf="servicio.estatus == 'Aceptado'">
+                            <ion-item>
+                                <ion-label>Dirigiéndose por el pedido</ion-label>
+                                <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo(); mensajeYendo(servicio.playerIDUser, username);">
+                                </ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprando</ion-label>
+                                <ion-toggle [(ngModel)]="comprandoStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprado</ion-label>
+                                <ion-toggle [(ngModel)]="compradoStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>En Puerta</ion-label>
+                                <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                        </div>
+                        <div *ngIf="servicio.estatus == 'Yendo'">
+                            <ion-item>
+                                <ion-label>Dirigiéndose por el pedido</ion-label>
+                                <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprando</ion-label>
+                                <ion-toggle [(ngModel)]="comprandoStatus" (ionChange)="comprando(); mensajeComprando(servicio.playerIDUser, username);">
+                                </ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprado</ion-label>
+                                <ion-toggle [(ngModel)]="compradoStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>En Puerta</ion-label>
+                                <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                        </div>
+
+                        <div *ngIf="servicio.estatus == 'Comprando'">
+                            <ion-item>
+                                <ion-label>Dirigiéndose por el pedido</ion-label>
+                                <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprando</ion-label>
+                                <ion-toggle [(ngModel)]="comprandoStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprado</ion-label>
+                                <ion-toggle [(ngModel)]="compradoStatus" (ionChange)="comprado(); mensajeComprado(servicio.playerIDUser, username); servicioIniciado();" [disabled]="servicio.numPedidos != servicio.numTikets"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>En Puerta</ion-label>
+                                <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="enPuerta()" disabled="true"></ion-toggle>
+                            </ion-item>
+                        </div>
+
+                        <div *ngIf="servicio.estatus == 'Comprado'">
+                            <ion-item>
+                                <ion-label>Dirigiéndose por el pedido</ion-label>
+                                <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprando</ion-label>
+                                <ion-toggle [(ngModel)]="comprandoStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprado</ion-label>
+                                <ion-toggle [(ngModel)]="compradoStatus" (ionChange)="comprado()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>En Puerta</ion-label>
+                                <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="enPuerta(); mensajeEnPuerta(servicio.playerIDUser, username); servicioTerminado(); stopBackgroundGeolocation();">
+                                </ion-toggle>
+                            </ion-item>
+                        </div>
+                        <div *ngIf="servicio.estatus == 'EnPuerta'">
+                            <ion-item>
+                                <ion-label>Dirigiéndose por el pedido</ion-label>
+                                <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprando</ion-label>
+                                <ion-toggle [(ngModel)]="comprandoStatus" (ionChange)="comprando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Comprado</ion-label>
+                                <ion-toggle [(ngModel)]="compradoStatus" (ionChange)="comprado()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>En Puerta</ion-label>
+                                <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="enPuerta()" disabled="true"></ion-toggle>
+                            </ion-item>
+                        </div>
+                    </ion-card>
+                </ion-col>
+            </ion-row> 
+            <br><br>           
+                <ion-col *ngIf="servicio.estatus == 'EnPuerta'" text-center>
+                    <button ion-button color="orange" (click)="realizarCobro(servicio.metodo_pago)" full round>                        
+                             Realizar Cobro                        
+                    </button>
+                </ion-col>
+
+                <!-- <button ion-button color="orange" (click)="realizarCobro(servicio.metodo_pago)">                        
+                    Realizar Cobro                        
+           </button> -->
+        </ion-grid>
+    </div>
+    <div *ngIf="tipo==2">
+        <ion-grid>
+            <ion-card class="borde">
+                <ion-card-content>
+                    <ion-row>
+                        <ion-col class="letra">
+                            <b>Pedido</b>
+                        </ion-col>
+                        <ion-col col-4 text-right class="letra">
+                            <b> {{servicio.clave}}</b>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <!-- ID del Cliente en el servicio: {{servicio.uidCliente}} -->
+                        <ion-col>
+                            <!-- ID del Cliente en la consulta: {{cliente.uid}} <br><br><br><br>  -->
+                            <b> ClIENTE Y DIRECCIÓN</b>
+                            <br> {{servicio.nombreUsuario}}
+                            <br> {{servicio.entregaDir}} <br>
+                            <br> {{servicio.apto}} <br>
+                            <b>Método de Pago:</b> {{servicio.metodo_pago}}
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+                <ion-row>
+                    <ion-col text-center>
+                        <button ion-button color="orange" (click)="abrirMapa(lat,lng)" class="boton1" round>
+                                <div class="eye">
+                                    <ion-icon ios="ios-pin" md="md-pin"></ion-icon> Mapa
+                                </div>
+                            </button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button color="orange" (click)="cancelarServicio(servicio.playerIDUser, username);" class="boton1" round>
+                                    <div class="eye">
+                                        <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon> Cancelar
+                                    </div>
+                                </button>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+
+            <br>
+            <div *ngFor="let pedido of pedidos">
+                <ion-card class="borde">
+                        <ion-row no-padding>
+                            <ion-col text-center>
+                                <h1><b>{{pedido.nombreLocal}}</b></h1>
+                            </ion-col>
+                        </ion-row>
+                                <div *ngFor="let producto of products">
+                                    <div *ngIf="pedido.$key==producto.pedidoID">
+                                        <ion-row>
+                                            <ion-col col-2 class="space">
+                                                <b>({{producto.cantidad}})</b>
+                                            </ion-col>
+                                            <ion-col class="space">
+                                                <b>{{producto.descripcion}}</b> <br>
+                                                {{producto.nota}}
+                                            </ion-col>
+                                            <ion-col col-3 text-right class="space">
+                                                {{producto.total | currency}}
+                                            </ion-col>
+                                            <ion-col col-2 text-right>
+                                                <ion-toggle [(ngModel)]="producto.estatus" (ionChange)="Comprado(producto.$key, producto.estatus)"></ion-toggle>
+                                            </ion-col>
+                                        </ion-row>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="dir">
+                                    {{pedido.direccionLocal}}
+                                </div>
+
+                            <!-- <ion-col col-3>
+                                <-- <button ion-button color="orange" (click)="abrirMapa(pedido.pedidoGeo._lat,pedido.pedidoGeo._long)" round>
+                                    <div class="eye">
+                                        <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+                                    </div>
+                                </button> --
+                                <br><br>
+                                <div [hidden]="pedido.estatus=='true'" (click)="mostrarModal(pedido.$key,servicio.numTikets, 'PV')">
+                                    <img class="image" src="assets/imgs/ticket.png">
+                                </div>
+                                <div [hidden]="pedido.estatus!='true'" (click)="mostrarModal(pedido.$key, servicio.numTikets, 'SV')">
+                                    <img class="image" src="assets/imgs/ticblock.png">
+                                </div>
+                            </ion-col> -->
+                </ion-card>
+            </div>
+            <ion-row [hidden]="servicio.estatus=='EnPuerta'">
+                <ion-col>
+                    <ion-card class="borde">
+                        <div *ngIf="servicio.estatus == 'AceptaBme'">
+                            <ion-item>
+                                <ion-label>Dirigiéndose por el Pedido</ion-label>
+                                <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo(); mensajeYendo(servicio.playerIDUser, username);">
+                                </ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Entregando el Pedido</ion-label>
+                                <ion-toggle [(ngModel)]="enviandoStatus" (ionChange)="enviando()" disabled="true"></ion-toggle>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>En Puerta</ion-label>
+                                <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="enPuerta()" disabled="true"></ion-toggle>
+                            </ion-item>
+                        </div>
+                    </ion-card>
+                    <ion-card class="borde">              
+                    <div *ngIf="servicio.estatus == 'Yendo'">
+                        <ion-item>
+                            <ion-label>Dirigiéndose por el Pedido</ion-label>
+                            <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo()" disabled="true"></ion-toggle>
+                        </ion-item>
+                        <!-- numero de pedidos: {{servicio.numPedidos}} <br> numero de Tickets: {{servicio.numTikets}} -->
+                        <ion-item>
+                            <ion-label>Entregando el Pedido</ion-label>
+                            <ion-toggle [(ngModel)]="enviandoStatus" (ionChange)="enviando(); mensajeComprado(servicio.playerIDUser, username); servicioIniciado();"></ion-toggle>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>En Puerta</ion-label>
+                            <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="enPuerta()" disabled="true"></ion-toggle>
+                        </ion-item>
+                    </div>
+                    </ion-card>
+
+                    <ion-card class="borde">
+                    <div *ngIf="servicio.estatus == 'Enviando'">
+                        <ion-item>
+                            <ion-label>Dirigiéndose por el Pedido</ion-label>
+                            <ion-toggle [(ngModel)]="yendoStatus" (ionChange)="yendo()" disabled="true"></ion-toggle>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>Entregando el Pedido</ion-label>
+                            <ion-toggle [(ngModel)]="enviandoStatus" (ionChange)="enviando()" disabled="true"></ion-toggle>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label>En Puerta</ion-label>
+                            <ion-toggle [(ngModel)]="enpuertaStatus" (ionChange)="enPuerta(); mensajeEnPuerta(servicio.playerIDUser, username); servicioTerminado(); stopBackgroundGeolocation();">
+                            </ion-toggle>
+                        </ion-item>
+                    </div>
+                    </ion-card>
+                </ion-col>
+            </ion-row>            
+            <br><br>                
+                <ion-col *ngIf="servicio.estatus == 'EnPuerta'" text-center>
+                    <button ion-button color="orange" (click)="realizarCobroRes(servicio.metodo_pago)" full round>                        
+                             Realizar Cobro                        
+                    </button>
+                </ion-col>
+            <!-- <br><br>
+            <button [hidden]="servicio.estatus != 'EnPuerta'" ion-button color="orange" (click)="realizarCobroRes(servicio.metodo_pago)" round>
+                    <div class="eye">
+                         Realizar Cobro
+                    </div>
+                </button> -->
+        </ion-grid>
+    </div>
+    <div id="map" #map></div>
+</ion-content>
+
+<ion-footer no-border>
+
+    <ion-row>
+        <ion-col text-center>
+            <button ion-button clear icon-only item-letf (click)="call(usuario.phone)">
+                <ion-icon name="call" ios="ios-call" md="md-call" color="orange"></ion-icon>
+            </button>
+        </ion-col>
+        <ion-col text-center>
+            <button ion-button clear icon-only item-right (click)="enviarMensage(usuario.username, usuario.lastname, servicio.playerIDUser)">
+                <ion-icon name="chatboxes" ios="ios-chatboxes" md="md-chatboxes" color="orange"></ion-icon>
+            </button>
+        </ion-col>
+    </ion-row>
+
+</ion-footer>

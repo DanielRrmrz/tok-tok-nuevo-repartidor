@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar color="orange">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                    <ion-buttons>
+                        <button ion-button icon-only (click)="goBack()">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </button>
+                    </ion-buttons>
+                </ion-col>
+                <ion-col col-8>
+                    <div text-center>
+                        <ion-title>Mi ubicación</ion-title>
+                    </div>
+                </ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-searchbar #searchbar placeholder="¿Dónde lo entregamos?">
+    </ion-searchbar>
+    <div class="map">
+        <div id="map" #map></div>
+    </div>
+</ion-content>

@@ -1,0 +1,37 @@
+page-about-us {
+    .background {
+        background: url('../assets/imgs/feature-image.png');
+        background-size: cover;
+        height: 20%;
+    }
+    .page-title {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        background: #d44322;
+        padding: 10px;
+        opacity: 0.8;
+        h1 {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 3rem;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+    }
+    .contents {
+        font-size: 14px;
+        color: #333;
+        text-align: justify;
+    }
+}

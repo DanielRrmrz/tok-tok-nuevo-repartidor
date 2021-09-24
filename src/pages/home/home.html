@@ -1,0 +1,219 @@
+<ion-header no-border>
+    <ion-navbar color="orange">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+                </ion-col>
+                <ion-col col-8>
+                    <div text-center>
+                        <ion-title>TOCTOC</ion-title>
+                    </div>
+                </ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="fondo">
+    <div [hidden]="serviPLQ != 0 || serviR != 0">
+        <ion-card>
+            <ion-card-header text-center>
+                <h2><b>Por el momento no tienes servicios</b></h2>
+            </ion-card-header>
+            <img class="image" src="assets/imgs/logo_.png" />
+            <br><br>
+        </ion-card>
+    </div>
+    <ion-list>
+        <div *ngFor="let servicioPLQ of serviciosPLQ">
+            <div *ngIf="servicioPLQ.tipo == 1">
+                <ion-card class="borde">
+                    <ion-item-sliding #slidingItem class="animated bounceInLeft" text-wrap class="borde">
+                        <ion-item class="pideLQ" text-wrap>
+                            <ion-row>
+                                <ion-col col-3 class="padding">
+                                    <ion-thumbnail item-start>
+                                        <img src="assets/imgs/logo.png" />
+                                    </ion-thumbnail>
+                                </ion-col>
+
+                                <ion-col class="padding">
+                                    <ion-row>
+                                        <ion-col>
+                                            <h1>{{ servicioPLQ.nombreUsuario }}</h1>
+                                            <div *ngIf="servicioPLQ.tipo == 1">
+                                                <h2>Pide lo que quieras</h2>
+                                            </div>
+                                        </ion-col>
+                                    </ion-row>
+                                    <ion-row>
+                                        <ion-col text-center>
+                                            <button ion-button color="dark" (click)="
+                          aceptarServicio(
+                            servicioPLQ.id,
+                            servicioPLQ.tipo,
+                            repartidor.playerID
+                          );
+                          limpiarNotificacion()
+                        " round>
+                        <ion-icon name="checkmark"></ion-icon>&emsp;Aceptar
+                      </button>
+                                        </ion-col>
+                                    </ion-row>
+                                </ion-col>
+                                <ion-col col-2>
+                                    <p class="tiempo">
+                                        {{ servicioPLQ.enEspera | relativeTime }}
+                                    </p>
+                                    <!-- <div class="eye" (click)="
+                      openDetalle(
+                        servicioPLQ.uidCliente,
+                        servicioPLQ.id,
+                        servicioPLQ.tipo,
+                        repartidor.playerID
+                      )
+                    " text-center>
+                                        <ion-icon ios="ios-eye" md="md-eye"></ion-icon>
+                                    </div> -->
+                                </ion-col>
+                            </ion-row>
+                        </ion-item>
+                        <ion-item-options side="right">
+                            <button ion-button color="orange" (click)="masDetalles(servicioPLQ.id, servicioPLQ.uidCliente, servicioPLQ.tipo, repartidor.playerID)">
+                                    <ion-icon name="add"></ion-icon>
+                                    <span>Detalles</span>
+                                </button>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-card>
+            </div>
+        </div>
+    </ion-list>
+    <ion-list>
+        <div *ngFor="let servicioR of serviciosR" class="borde">
+            <div *ngIf="servicioR.tipo == 2">
+                <div *ngIf="servicioR.abierto == null">
+
+                    <ion-card class="borde">
+                        <ion-item-sliding #slidingItem class="animated bounceInLeft" text-wrap class="borde">
+                            <ion-item class="Menu" text-wrap>
+                                <ion-row>
+                                    <ion-col col-3 class="padding">
+                                        <ion-thumbnail item-start>
+                                            <img src="assets/imgs/logo.png" />
+                                        </ion-thumbnail>
+                                    </ion-col>
+                                    <ion-col class="padding">
+                                        <ion-row>
+                                            <ion-col>
+                                                <h1 class="negro">{{ servicioR.nombreUsuario }}</h1>
+
+                                                <div *ngIf="servicioR.tipo == 2">
+                                                    <h2 class="negro">Restaurante</h2>
+                                                </div>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col text-center>
+                                                <button ion-button color="dark" (click)="
+                      aceptarServicio(
+                        servicioR.id,
+                        servicioR.tipo,
+                        repartidor.playerID
+                      );
+                      limpiarNotificacion()
+                    " round>
+                    <ion-icon name="checkmark"></ion-icon>&emsp;Aceptar
+                  </button>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-col>
+                                    <ion-col col-2>
+                                        <p class="tiempo">{{ servicioR.enEspera | relativeTime }}</p>
+                                        <!-- <div class="eye" (click)="
+                  openDetalle(
+                    servicioR.uidCliente,
+                    servicioR.id,
+                    servicioR.tipo,
+                    repartidor.playerID
+                  )
+                " text-center>
+                                    <ion-icon ios="ios-eye" md="md-eye"></ion-icon>
+                                </div> -->
+                                    </ion-col>
+                                </ion-row>
+                            </ion-item>
+                            <ion-item-options side="right">
+                                <button ion-button color="orange" (click)="masDetalles(servicioR.id, servicioR.uidCliente, servicioR.tipo, repartidor.playerID)">
+                                    <ion-icon name="add"></ion-icon>
+                                    <span>Detalles</span>
+                                </button>
+                            </ion-item-options>
+                        </ion-item-sliding>
+                    </ion-card>
+                </div>
+            </div>
+        </div>
+    </ion-list>
+    <ion-list>
+        <div *ngFor="let servicioCon of serviciosR">
+            <div *ngIf="servicioCon.tipo == 2">
+                <div *ngIf="servicioCon.abierto != null">
+                    <ion-card class="borde">
+                        <ion-item-sliding #slidingItem class="animated bounceInLeft" text-wrap class="borde">
+                            <ion-item class="Conv" text-wrap>
+                                <ion-row>
+                                    <ion-col col-3 class="padding">
+                                        <ion-thumbnail item-start>
+                                            <img src="assets/imgs/logo.png" />
+                                        </ion-thumbnail>
+                                    </ion-col>
+                                    <ion-col class="padding">
+                                        <ion-row>
+                                            <ion-col col-6>
+                                                <h1 class="negro">{{ servicioCon.nombreLocal }}</h1>
+                                                <div *ngIf="servicioCon.tipo == 2">
+                                                    <h2 class="negro">Convenio</h2>
+                                                </div>
+                                            </ion-col>
+                                            <ion-col col-6>
+                                                <p class="negro">
+                                                    {{ servicioCon.enEspera | relativeTime }}
+                                                </p>
+                                            </ion-col>
+                                        </ion-row>
+                                        <ion-row>
+                                            <ion-col text-center>
+                                                <button ion-button color="dark" (click)="
+                            aceptarServicio(
+                              servicioCon.id,
+                              servicioCon.tipo,
+                              repartidor.playerID
+                            );
+                            limpiarNotificacion()
+                          " round>
+                          <ion-icon name="checkmark"></ion-icon>&emsp;Aceptar
+                        </button>
+                                            </ion-col>
+                                        </ion-row>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-item>
+                            <ion-item-options side="right">
+                                <button ion-button color="orange" (click)="masDetalles(servicioCon.id, servicioCon.uidCliente, servicioCon.tipo, repartidor.playerID)">
+                                        <ion-icon name="add"></ion-icon>
+                                        <span>Detalles</span>
+                                    </button>
+                            </ion-item-options>
+                        </ion-item-sliding>
+                    </ion-card>
+                </div>
+            </div>
+        </div>
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,64 @@
+page-historial {
+    #dire {
+        font-size: 1.2rem;
+        color: #9E9E9E;
+        width: 95%;
+    }
+    #masPedidos {
+        text-align: center;
+        margin-top: 8%;
+        font-size: 1.2rem;
+    }
+    #E {
+        font-size: 1.2rem;
+        color: #f27627;
+    }
+    #M {
+        font-size: 1.2rem;
+        color: #f27627;
+    }
+    .carrito {
+        width: 15%;
+        margin-left: 60%;
+        margin-top: -13px;
+    }
+    .numero {
+        position: absolute;
+        width: 22%;
+        margin-left: 68%;
+        z-index: 1;
+        margin-top: -9%;
+        color: #fff;
+    }
+    .label-md {
+        margin: 0px 0px 0px 0;
+    }
+    .label-ios {
+        margin: 0px 0px 0px 0;
+    }
+    .list-ios {
+        margin: 0px 0 5px;
+    }
+    .list-md {
+        margin: 0px 0 5px;
+    }
+    #ion_card {
+        display: block;
+        overflow: hidden;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+        background-color: white;
+    }
+    .font {
+        font-size: small;
+    }
+    ._font {
+        font-size: small;
+        margin-left: 3rem;
+    }
+    .estatus.terminado {
+        background-color: springgreen;
+    }
+    .estatus.cancelado {
+        background-color: red;
+    }
+}

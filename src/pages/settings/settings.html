@@ -1,0 +1,61 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2017
+  - @license   Fulcrumy
+-->
+<!-- Settings Page -->
+
+<ion-header no-border>
+  <ion-navbar color="orange" hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'SETTINGS.TITLE' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group>
+    <div class="animated fadeInUp">
+      <p class="tag">{{'SECOND_LANDING_PAGE.TITLE' | translate}}</p>
+      <ion-item class="select-box">
+        <ion-label>{{'SECOND_LANDING_PAGE.DROPDOWN_LABEL' | translate}}</ion-label>
+        <ion-select [(ngModel)]="language" (ionChange)="chooseLanguage(language)">
+          <ion-option [selected]="language.ID == 'en'" *ngFor="let language of languages; let i=index" [value]="'LANGUAGES.' + i + '.ID' | translate">{{'LANGUAGES.' + i + '.VALUE' | translate}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <br>
+
+  <ion-list>
+    <p class="tag">Notification</p>
+    <ion-item text-wrap>
+      <ion-label>Receive special offers</ion-label>
+      <ion-toggle color="orange" checked="true"></ion-toggle>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-label>Get update on your order status</ion-label>
+      <ion-toggle color="orange" checked="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <br>
+
+  <ion-list no-lines>
+    <p class="tag">Support Us</p>
+    <button ion-item>
+    Rate Us
+    </button>
+    <button ion-item>
+    Share with friends
+    </button>
+    <button ion-item>
+    Feedback
+    </button>
+    <button ion-item>
+    Privacy Policy
+    </button>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,28 @@
+page-first-landing {
+    .background {
+        height: 100%;
+        background-image: url('../assets/imgs/landing-page.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        z-index: 1;
+        position: absolute;
+        .contents {
+            position: relative;
+            left: 10%;
+            right: 20%;
+            bottom: 5%;
+            top: 40%;
+            color: #fff;
+            h1 {
+                color: #f14d3a;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

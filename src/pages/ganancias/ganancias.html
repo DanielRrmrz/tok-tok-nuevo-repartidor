@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="orange" hideBackButton>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-2>
+                <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+            </ion-col>
+            <ion-col col-8>
+                <div text-center>
+                    <ion-title>Ganancias</ion-title>
+                </div>
+            </ion-col>
+            <ion-col col-2></ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="cards" (click)="porDia()">
+    <div class="card-title">
+      GANANCIAS DEL DÍA 
+    </div>
+  </ion-card>
+
+  <ion-card class="cards" (click)="porFechas()">
+    <div class="card-title">
+      FILTRAR POR FECHAS  
+    </div>
+  </ion-card>
+</ion-content>

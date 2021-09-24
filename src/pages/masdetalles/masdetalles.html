@@ -1,0 +1,100 @@
+<!-- <ion-header>
+    <ion-navbar>
+        <ion-title>masdetalles</ion-title>
+    </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <ion-row>
+                <ion-col class="letra" text-center>
+                    <b>Detalles</b>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5>
+                    <img class="photo" src="{{servicio.photoUsuario}}?type=large&width=720&height=720" />
+                </ion-col>
+                <ion-col class="name">
+                    <br><br> {{servicio.nombreUsuario}}
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+        <ion-row>
+            <ion-col text-center class="title1">
+                <b> Servicios</b>
+            </ion-col>
+        </ion-row>
+
+        <ion-grid>
+            <ion-row>
+                <ion-col col-3 text-center class="title2">
+                    <b>Total</b>
+                </ion-col>
+                <ion-col text-center class="title2">
+                    <b>Completados</b>
+                </ion-col>
+                <ion-col text-center class="title2">
+                    <b>Cancelados</b>
+                </ion-col>
+            </ion-row>
+            <ion-row class="row1">
+                <ion-col text-center col-3>
+                    {{totalSer}}
+                </ion-col>
+                <ion-col text-center>
+                    {{servCompletados}}
+                </ion-col>
+                <ion-col text-center>
+                    {{servCancelados}}
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-card-content>
+            <ion-row>
+                <ion-col>
+                    <b>DIRECCIÓN DE ENTREGA</b> <br> {{servicio.entregaDir}} <br> {{servicio.apto}}
+                </ion-col>
+            </ion-row>
+
+            <br>
+
+            <div *ngFor="let pedido of pedidos">
+                <ion-row no-padding>
+                    <ion-col>
+                        <h2><b>{{pedido.nombreLocal}}</b></h2>
+                        <div class="dir">
+                            {{pedido.direccionLocal}}
+                        </div>
+                        <div *ngFor="let producto of productos">
+                            <div *ngIf="pedido.$key==producto.pedidoID">
+                                <b>({{producto.cantidad}})</b>&emsp;<b>{{producto.producto}}</b>
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <br>
+            </div>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <div text-center>
+                        <button ion-button round block color="orange" (click)="(goBack())">Atras</button>
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div text-center>
+                        <button ion-button round block color="orange" (click)="aceptarServicio()">Aceptar</button>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,275 @@
+{
+  "LANGUAGE": "Bangla Language",
+  "SIDEBAR_List": [
+    {
+      "NAME": "ল্যান্ডিং পৃষ্ঠা",
+      "COMPONENT": "FirstLandingPage",
+      "ICON": "home"
+    },
+    {
+      "NAME": "ডেলিভারি তথ্য",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "information"
+    },
+    {
+      "NAME": "খাদ্য বিভাগ",
+      "COMPONENT": "FoodCategoriesPage",
+      "ICON": "keypad"
+    },
+    {
+      "NAME": "কার্ট",
+      "COMPONENT": "CartPage",
+      "ICON": "cart"
+    },
+    {
+      "NAME": "ডেলিভারি নিশ্চিতকরণ",
+      "COMPONENT": "DeliveryConfirmationPage",
+      "ICON": "basket"
+    },
+    {
+      "NAME": "পেমেন্ট",
+      "COMPONENT": "PaymentPage",
+      "ICON": "flame"
+    },
+    {
+      "NAME": "ডেলিভারি ট্র্যাকিং",
+      "COMPONENT": "DeliveryTrackingPage",
+      "ICON": "paper-plane"
+    },
+    {
+      "NAME": "সেটিংস",
+      "COMPONENT": "SettingsPage",
+      "ICON": "settings"
+    },
+    {
+      "NAME": "যোগাযোগ",
+      "COMPONENT": "ContactPage",
+      "ICON": "contact"
+    },
+    {
+      "NAME": "আমাদের সম্পর্কে",
+      "COMPONENT": "AboutUsPage",
+      "ICON": "information-circle"
+    }
+  ],
+  "LANGUAGES": [
+    {
+      "ID": "ar",
+      "VALUE": "আরবি"
+    },
+    {
+      "ID": "bn",
+      "VALUE": "বাংলা"
+    },
+    {
+      "ID": "en",
+      "VALUE": "ইংরেজি"
+    },
+    {
+      "ID": "es",
+      "VALUE": "স্পেনীয়"
+    },
+    {
+      "ID": "fr",
+      "VALUE": "ফরাসি"
+    },
+    {
+      "ID": "it",
+      "VALUE": "ইতালী"
+    },
+    {
+      "ID": "ja",
+      "VALUE": "জাপানি"
+    },
+    {
+      "ID": "pt",
+      "VALUE": "পর্তুগিজ"
+    },
+    {
+      "ID": "zh",
+      "VALUE": "চীনা"
+    }
+  ],
+  "FIRST_LANDING_PAGE": {
+    "TITLE": "খাদ্য বিতরণ অ্যাপ",
+    "BUTTON": "প্রবেশ করান"
+  },
+  "SECOND_LANDING_PAGE": {
+    "TITLE": "আপনার ভাষা নির্বাচন করুন",
+    "DROPDOWN_LABEL": "ভাষা নির্বাচন কর",
+    "BUTTON": "গো"
+  },
+  "USER_INFORMATION": {
+    "TITLE": "আপনার তথ্য",
+    "WELCOME": "IonicBucket স্বাগতম",
+    "SUBTITLE": "আপনার তথ্য দিন",
+    "BUTTON": "GO"
+  },
+  "FOOD_CATEGORIES": {
+    "TITLE": "মেনু",
+    "BURGER": "বার্গার",
+    "PIZZA": "পিজা",
+    "SNACKS": "খাবার",
+    "CHINESS": "চীনা",
+    "SALADS": "স্যালাড",
+    "DESSERTS": "ডেজার্ট",
+    "ICECREAMS": "আইসক্রিম",
+    "COFFEE": "কফি"
+  },
+  "FOOD_ITEMS": {
+    "TITLE": "আইটেমস",
+    "BURGER": [
+      {
+        "NAME": "Double Cheese Burger (Beef)",
+        "DESCRIPTION": "Beef patty, sausage gravy, beef bacon, cheese ",
+        "PRICE": "$100"
+      },
+      {
+        "NAME": "Quarter Pounder (Beef)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Double Quarter Pounder (Beef)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce ",
+        "PRICE": "$150"
+      },
+      {
+        "NAME": "Double Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$180"
+      },
+      {
+        "NAME": "Quarter Pounder (Chicken)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$120"
+      },
+      {
+        "NAME": "Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$160"
+      },
+      {
+        "NAME": "Mighty Spicy Chic",
+        "DESCRIPTION": "Chicken patty X 2, beef bacon, cheese, naga blast sauce",
+        "PRICE": "$190"
+      },
+      {
+        "NAME": "Roast Chicken Poutine",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$250"
+      }
+    ],
+    "PIZZA": [
+      {
+        "NAME": "Chicken BBQ Pizza",
+        "DESCRIPTION": "Chicken breast with BBQ sauce",
+        "PRICE": "$600"
+      },
+      {
+        "NAME": "Pizza Margarita",
+        "DESCRIPTION": "Pizza Margarita",
+        "PRICE": "$700"
+      }
+    ],
+    "SNACKS": [
+      {
+        "NAME": "Chocolate Custard",
+        "DESCRIPTION": "Delicious combination of chocolate and rich custard",
+        "PRICE": "$500"
+      },
+      {
+        "NAME": "Dazzled",
+        "DESCRIPTION": "Intense dark chocolate with a milk chocolate pudding filling",
+        "PRICE": "$200"
+      }
+    ],
+    "CHINESS": [
+      {
+        "NAME": "Chicken Corn Soup",
+        "DESCRIPTION": "Corn, egg, butter, salt, pepper in clear chicken broth",
+        "PRICE": "$400"
+      },
+      {
+        "NAME": "Chicken Drumsticks",
+        "DESCRIPTION": "Chicken leg prepared with sauce,a blend of spices & special crunchy topping",
+        "PRICE": "$550"
+      }
+    ],
+    "SALADS": [
+      {
+        "NAME": "Chicken Salad",
+        "DESCRIPTION": "Roasted chicken with blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Prawn Salad",
+        "DESCRIPTION": "Roasted prawn with a blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$300"
+      }
+    ],
+    "DESSERTS": [
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$200"
+      }
+    ],
+    "ICECREAMS": [
+      {
+        "NAME": "Strawberry Shortcake",
+        "DESCRIPTION": "French vanilla icecream,strawberry filling,vanilla sponge cake,caramel fudge",
+        "PRICE": "$260"
+      },
+      {
+        "NAME": "Mocha Fudge Temptation",
+        "DESCRIPTION": "Chocolate icecream,coffee icecream,brownies,expresso powder,chocolate fudge",
+        "PRICE": "$500"
+      }
+    ],
+    "COFFEE": [
+      {
+        "NAME": "Americano",
+        "DESCRIPTION": "Americano",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Cold Coffee",
+        "DESCRIPTION": "Cold Coffee",
+        "PRICE": "$400"
+      }
+    ]
+  },
+  "CART": {
+    "TITLE": "আপনার অর্ডার",
+    "BUTTON": "অর্ডার প্রসেস"
+  },
+  "DELIVERY_CONFIRMATION": {
+    "TITLE": "আপনার ডেলিভারি ঠিকানা",
+    "BUTTON": "অর্ডার"
+  },
+  "PAYMENT": {
+    "TITLE": "পারিশ্রমিক",
+    "BUTTON": "অর্থপ্রদান করুন"
+  },
+  "DELIVERY_TRACKING": {
+    "TITLE": "ট্র্যাক আপনার অর্ডার"
+  },
+  "SETTINGS": {
+    "TITLE": "সেটিংস"
+  },
+  "CONTACTUS": {
+    "TITLE": "আমাদের সাথে যোগাযোগ করুন"
+  },
+  "ABOUTUS": {
+    "TITLE": "আমাদের সম্পর্কে"
+  },
+  "ITEM_DETAILS": {
+    "BUTTON": "কার্টে যোগ করুন"
+  }
+}

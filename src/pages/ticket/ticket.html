@@ -1,0 +1,40 @@
+<ion-header no-border>
+    <ion-navbar color="orange" hideBackButton>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-buttons>
+                        <button ion-button (click)="cerrarModal()">
+                        Cerrar
+                    </button>
+                    </ion-buttons>
+                </ion-col>
+                <ion-col>
+                    <ion-buttons end>
+                        <button ion-button (click)="subirTicket()" [disabled]="imagenPreview.length <= 1">
+                        Cantidad
+                    </button>
+                    </ion-buttons>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item text-center *ngIf="imagenPreview" class="foto">
+        <img [src]="imagenPreview" />
+        <!-- <img src="{{usuario.photo}}?type=large&width=720&height=720" style="width:60%;border-radius:50%;"> -->
+    </ion-item>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <button ion-button block icon-left color="orange" (click)="mostrarCamara()">
+                    <ion-icon name="camera"></ion-icon>
+                    &nbsp;&nbsp;Camara
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

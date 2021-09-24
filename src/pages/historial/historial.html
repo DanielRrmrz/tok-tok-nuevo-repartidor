@@ -1,0 +1,96 @@
+<ion-header>
+    <ion-navbar color="orange" hideBackButton>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-2>
+                    <button ion-button menuToggle>
+                        <ion-icon name="menu"></ion-icon>
+                    </button>
+                </ion-col>
+                <ion-col col-8>
+                    <div text-center>
+                        <ion-title>Historial de Servicios</ion-title>
+                    </div>
+                </ion-col>
+                <ion-col col-2></ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngFor="let service of servicios; let i = index;">
+        <ion-list>
+            <ion-item-sliding #slidingItem>
+                <ion-item>
+                    <ion-card id="ion_card">
+                        <ion-card-header>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col col-4>
+                                        <div text-left class="font">
+                                            Servicio: #{{service.clave}}
+                                        </div>
+                                    </ion-col>
+                                    <ion-col col-4>
+                                        <div text-right class="_font">
+                                            <ion-badge class="estatus" [class.terminado]=" service.estatus == 'Terminado' " [class.cancelado]=" service.estatus == 'Cancelado' ">
+                                                {{service.estatus}}
+                                            </ion-badge>
+                                        </div>
+                                    </ion-col>
+                                    <ion-col col-4>
+                                        <ion-icon name="star" class="logo_a animated fadeInDown carrito"></ion-icon>
+                                        {{service.calificacionRepartidor}}
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-card-header>
+                        <ion-card-content>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col col-8>
+                                        <div text-wrap color="dire" id="dire">
+                                            {{service.entregaDir}}
+                                        </div>
+                                    </ion-col>
+                                    <ion-col col-4>
+                                        <div text-wrap color="dire" id="dire">
+                                            {{service.fecha | date:'short'}}
+                                        </div>
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col col-8 color="dire" id="dire">
+                                        Costo
+                                    </ion-col>
+                                    <ion-col col-4 color="dire" id="dire">
+                                        {{service.totalNeto | currency}}
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-item>
+                <!-- <ion-item-options side="rigth">
+                    <button ion-button color="orange" (click)="verMas(service.uid)">
+                        <span>Ver +</span>
+                    </button>
+                </ion-item-options> -->
+            </ion-item-sliding>
+        </ion-list>
+        <ion-row>
+            <ion-col col-6>
+            </ion-col>
+            <ion-col col-6>
+                <!-- <div text-right id="E">
+                    <ion-icon name="arrow-back"></ion-icon>
+                    Ver +
+                </div> -->
+            </ion-col>
+        </ion-row>
+    </div>
+
+</ion-content>

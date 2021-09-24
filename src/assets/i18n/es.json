@@ -1,0 +1,220 @@
+{
+    "LANGUAGE": "Spanish Language",
+    "SIDEBAR_List": [{
+        "NAME": "Cerrar Sesión",
+        "COMPONENT": "ContactPage",
+        "ICON": "contact"
+    }],
+    "LANGUAGES": [{
+            "ID": "ar",
+            "VALUE": "Arábica"
+        },
+        {
+            "ID": "bn",
+            "VALUE": "Bangla"
+        },
+        {
+            "ID": "en",
+            "VALUE": "Inglés"
+        },
+        {
+            "ID": "es",
+            "VALUE": "Español"
+        },
+        {
+            "ID": "fr",
+            "VALUE": "francés"
+        },
+        {
+            "ID": "it",
+            "VALUE": "italiano"
+        },
+        {
+            "ID": "ja",
+            "VALUE": "japonés"
+        },
+        {
+            "ID": "pt",
+            "VALUE": "Portugues"
+        },
+        {
+            "ID": "zh",
+            "VALUE": "chino"
+        }
+    ],
+    "FIRST_LANDING_PAGE": {
+        "TITLE": "Aplicación de entrega de alimentos",
+        "BUTTON": "Entrar"
+    },
+    "SECOND_LANDING_PAGE": {
+        "TITLE": "Elige tu idioma",
+        "DROPDOWN_LABEL": "Seleccione el idioma",
+        "BUTTON": "IR"
+    },
+    "USER_INFORMATION": {
+        "TITLE": "Tu información",
+        "WELCOME": "BIENVENIDO A BRINGME",
+        "SUBTITLE": "Da tu información",
+        "BUTTON": "IR"
+    },
+    "FOOD_CATEGORIES": {
+        "TITLE": "Menú",
+        "BURGER": "Hamburguesa",
+        "PIZZA": "Pizza",
+        "SNACKS": "Aperitivos",
+        "CHINESS": "chino",
+        "SALADS": "Ensaladas",
+        "DESSERTS": "Postres",
+        "ICECREAMS": "Helados",
+        "COFFEE": "café"
+    },
+    "FOOD_ITEMS": {
+        "TITLE": "Artículos",
+        "BURGER": [{
+                "NAME": "Double Cheese Burger (Beef)",
+                "DESCRIPTION": "Beef patty, sausage gravy, beef bacon, cheese ",
+                "PRICE": "$100"
+            },
+            {
+                "NAME": "Quarter Pounder (Beef)",
+                "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+                "PRICE": "$200"
+            },
+            {
+                "NAME": "Double Quarter Pounder (Beef)",
+                "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce ",
+                "PRICE": "$150"
+            },
+            {
+                "NAME": "Double Cheese Burger (Chicken)",
+                "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+                "PRICE": "$180"
+            },
+            {
+                "NAME": "Quarter Pounder (Chicken)",
+                "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+                "PRICE": "$120"
+            },
+            {
+                "NAME": "Cheese Burger (Chicken)",
+                "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+                "PRICE": "$160"
+            },
+            {
+                "NAME": "Mighty Spicy Chic",
+                "DESCRIPTION": "Chicken patty X 2, beef bacon, cheese, naga blast sauce",
+                "PRICE": "$190"
+            },
+            {
+                "NAME": "Roast Chicken Poutine",
+                "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+                "PRICE": "$250"
+            }
+        ],
+        "PIZZA": [{
+                "NAME": "Chicken BBQ Pizza",
+                "DESCRIPTION": "Chicken breast with BBQ sauce",
+                "PRICE": "$600"
+            },
+            {
+                "NAME": "Pizza Margarita",
+                "DESCRIPTION": "Pizza Margarita",
+                "PRICE": "$700"
+            }
+        ],
+        "SNACKS": [{
+                "NAME": "Chocolate Custard",
+                "DESCRIPTION": "Delicious combination of chocolate and rich custard",
+                "PRICE": "$500"
+            },
+            {
+                "NAME": "Dazzled",
+                "DESCRIPTION": "Intense dark chocolate with a milk chocolate pudding filling",
+                "PRICE": "$200"
+            }
+        ],
+        "CHINESS": [{
+                "NAME": "Chicken Corn Soup",
+                "DESCRIPTION": "Corn, egg, butter, salt, pepper in clear chicken broth",
+                "PRICE": "$400"
+            },
+            {
+                "NAME": "Chicken Drumsticks",
+                "DESCRIPTION": "Chicken leg prepared with sauce,a blend of spices & special crunchy topping",
+                "PRICE": "$550"
+            }
+        ],
+        "SALADS": [{
+                "NAME": "Chicken Salad",
+                "DESCRIPTION": "Roasted chicken with blend of spices served with fresh seasonal herbs & vegetable salad",
+                "PRICE": "$200"
+            },
+            {
+                "NAME": "Prawn Salad",
+                "DESCRIPTION": "Roasted prawn with a blend of spices served with fresh seasonal herbs & vegetable salad",
+                "PRICE": "$300"
+            }
+        ],
+        "DESSERTS": [{
+                "NAME": "Brownie",
+                "DESCRIPTION": "Brownie",
+                "PRICE": "$300"
+            },
+            {
+                "NAME": "Brownie",
+                "DESCRIPTION": "Brownie",
+                "PRICE": "$200"
+            }
+        ],
+        "ICECREAMS": [{
+                "NAME": "Strawberry Shortcake",
+                "DESCRIPTION": "French vanilla icecream,strawberry filling,vanilla sponge cake,caramel fudge",
+                "PRICE": "$260"
+            },
+            {
+                "NAME": "Mocha Fudge Temptation",
+                "DESCRIPTION": "Chocolate icecream,coffee icecream,brownies,expresso powder,chocolate fudge",
+                "PRICE": "$500"
+            }
+        ],
+        "COFFEE": [{
+                "NAME": "Americano",
+                "DESCRIPTION": "Americano",
+                "PRICE": "$300"
+            },
+            {
+                "NAME": "Cold Coffee",
+                "DESCRIPTION": "Cold Coffee",
+                "PRICE": "$400"
+            }
+        ]
+    },
+    "CART": {
+        "TITLE": "Su pedido",
+        "BUTTON": "Orden de proceso"
+    },
+    "DELIVERY_CONFIRMATION": {
+        "TITLE": "Tu dirección de entrega",
+        "BUTTON": "Orden"
+    },
+    "PAYMENT": {
+        "TITLE": "Pago",
+        "BUTTON": "Paga"
+    },
+    "DELIVERY_TRACKING": {
+        "TITLE": "Rastrea tu orden",
+        "TITLE1": "Ir al destino"
+    },
+    "SETTINGS": {
+        "TITLE": "Configuraciones"
+    },
+    "CONTACTUS": {
+        "TITLE": "Cerrar Sesión"
+    },
+    "ABOUTUS": {
+        "TITLE": "Sobre nosotros"
+    },
+    "ITEM_DETAILS": {
+        "BUTTON": "Añadir a la cesta"
+    }
+}

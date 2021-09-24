@@ -1,0 +1,29 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2017
+  - @license   Fulcrumy
+-->
+<!-- Contact Us Page -->
+
+<ion-header no-border>
+    <ion-navbar color="orange" hideBackButton>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{'CONTACTUS.TITLE' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <div text-center>
+        <p class="contact-title">Cerrar Sesión</p>
+        <!-- <p class="contact-subtitle">FEEL FREE TO DROP US A MESSAGE!</p> -->
+    </div>
+    <br><br><br><br>
+    <ion-row>
+        <ion-col>
+            <button ion-button full round color="orange" (click)="Salir()">Cerrar Sesión</button>
+        </ion-col>
+    </ion-row>
+</ion-content>

@@ -1,0 +1,287 @@
+{
+  "LANGUAGE": "Italian Language",
+  "MENU_ITEMS": {
+    "LANDINGPAGE": "Pagina di destinazione",
+    "USER_INFO": "Informazioni sulla consegna",
+    "FOOD_CATEGORIES": "Categorie alimentari",
+    "CART": "Carrello",
+    "DELIVERY_CONFIRMATION": "Conferma di consegna",
+    "PAYMENT": "Pagamento",
+    "DELIVERY_TRACKING": "Monitoraggio della consegna",
+    "SETTINGS": "Impostazioni",
+    "CONTACT": "Contatto",
+    "ABOUT_US": "Riguardo a noi"
+  },
+  "SIDEBAR_List": [
+    {
+      "NAME": "Pagina di destinazione",
+      "COMPONENT": "FirstLandingPage",
+      "ICON": "home"
+    },
+    {
+      "NAME": "Informazioni sulla consegna",
+      "COMPONENT": "UserInformationPage",
+      "ICON": "information"
+    },
+    {
+      "NAME": "Categorie alimentari",
+      "COMPONENT": "FoodCategoriesPage",
+      "ICON": "keypad"
+    },
+    {
+      "NAME": "Carrello",
+      "COMPONENT": "CartPage",
+      "ICON": "cart"
+    },
+    {
+      "NAME": "Conferma di consegna",
+      "COMPONENT": "DeliveryConfirmationPage",
+      "ICON": "basket"
+    },
+    {
+      "NAME": "Pagamento",
+      "COMPONENT": "PaymentPage",
+      "ICON": "flame"
+    },
+    {
+      "NAME": "Monitoraggio della consegna",
+      "COMPONENT": "DeliveryTrackingPage",
+      "ICON": "paper-plane"
+    },
+    {
+      "NAME": "Impostazioni",
+      "COMPONENT": "SettingsPage",
+      "ICON": "settings"
+    },
+    {
+      "NAME": "Contatto",
+      "COMPONENT": "ContactPage",
+      "ICON": "contact"
+    },
+    {
+      "NAME": "Riguardo a noi",
+      "COMPONENT": "AboutUsPage",
+      "ICON": "information-circle"
+    }
+  ],
+  "LANGUAGES": [
+    {
+      "ID": "ar",
+      "VALUE": "Arabo"
+    },
+    {
+      "ID": "bn",
+      "VALUE": "Bangla"
+    },
+    {
+      "ID": "en",
+      "VALUE": "Inglese"
+    },
+    {
+      "ID": "es",
+      "VALUE": "Spagnolo"
+    },
+    {
+      "ID": "fr",
+      "VALUE": "Francese"
+    },
+    {
+      "ID": "it",
+      "VALUE": "Italiano"
+    },
+    {
+      "ID": "ja",
+      "VALUE": "Giapponese"
+    },
+    {
+      "ID": "pt",
+      "VALUE": "Portugues"
+    },
+    {
+      "ID": "zh",
+      "VALUE": "Cinese"
+    }
+  ],
+  "FIRST_LANDING_PAGE": {
+    "TITLE": "App di consegna di cibo",
+    "BUTTON": "accedere"
+  },
+  "SECOND_LANDING_PAGE": {
+    "TITLE": "Scegli la tua LINGUA",
+    "DROPDOWN_LABEL": "Seleziona la lingua",
+    "BUTTON": "PARTIRE"
+  },
+  "USER_INFORMATION": {
+    "TITLE": "Le tue informazioni",
+    "WELCOME": "BENVENUTO IN IONICBUCKET",
+    "SUBTITLE": "Dai le tue informazioni",
+    "BUTTON": "PARTIRE"
+  },
+  "FOOD_CATEGORIES": {
+    "TITLE": "Menu",
+    "BURGER": "Burger",
+    "PIZZA": "Pizza",
+    "SNACKS": "Spuntini",
+    "CHINESS": "Cinese",
+    "SALADS": "insalate",
+    "DESSERTS": "Dolci",
+    "ICECREAMS": "Gelato",
+    "COFFEE": "caffè"
+  },
+  "FOOD_ITEMS": {
+    "TITLE": "Elementi",
+    "BURGER": [
+      {
+        "NAME": "Double Cheese Burger (Beef)",
+        "DESCRIPTION": "Beef patty, sausage gravy, beef bacon, cheese ",
+        "PRICE": "$100"
+      },
+      {
+        "NAME": "Quarter Pounder (Beef)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Double Quarter Pounder (Beef)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce ",
+        "PRICE": "$150"
+      },
+      {
+        "NAME": "Double Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$180"
+      },
+      {
+        "NAME": "Quarter Pounder (Chicken)",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$120"
+      },
+      {
+        "NAME": "Cheese Burger (Chicken)",
+        "DESCRIPTION": "BBQ chicken patty, smoked chicken layer, beef bacon, cheese",
+        "PRICE": "$160"
+      },
+      {
+        "NAME": "Mighty Spicy Chic",
+        "DESCRIPTION": "Chicken patty X 2, beef bacon, cheese, naga blast sauce",
+        "PRICE": "$190"
+      },
+      {
+        "NAME": "Roast Chicken Poutine",
+        "DESCRIPTION": "French fries and roasted chicken slices with gravy sauce",
+        "PRICE": "$250"
+      }
+    ],
+    "PIZZA": [
+      {
+        "NAME": "Chicken BBQ Pizza",
+        "DESCRIPTION": "Chicken breast with BBQ sauce",
+        "PRICE": "$600"
+      },
+      {
+        "NAME": "Pizza Margarita",
+        "DESCRIPTION": "Pizza Margarita",
+        "PRICE": "$700"
+      }
+    ],
+    "SNACKS": [
+      {
+        "NAME": "Chocolate Custard",
+        "DESCRIPTION": "Delicious combination of chocolate and rich custard",
+        "PRICE": "$500"
+      },
+      {
+        "NAME": "Dazzled",
+        "DESCRIPTION": "Intense dark chocolate with a milk chocolate pudding filling",
+        "PRICE": "$200"
+      }
+    ],
+    "CHINESS": [
+      {
+        "NAME": "Chicken Corn Soup",
+        "DESCRIPTION": "Corn, egg, butter, salt, pepper in clear chicken broth",
+        "PRICE": "$400"
+      },
+      {
+        "NAME": "Chicken Drumsticks",
+        "DESCRIPTION": "Chicken leg prepared with sauce,a blend of spices & special crunchy topping",
+        "PRICE": "$550"
+      }
+    ],
+    "SALADS": [
+      {
+        "NAME": "Chicken Salad",
+        "DESCRIPTION": "Roasted chicken with blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$200"
+      },
+      {
+        "NAME": "Prawn Salad",
+        "DESCRIPTION": "Roasted prawn with a blend of spices served with fresh seasonal herbs & vegetable salad",
+        "PRICE": "$300"
+      }
+    ],
+    "DESSERTS": [
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Brownie",
+        "DESCRIPTION": "Brownie",
+        "PRICE": "$200"
+      }
+    ],
+    "ICECREAMS": [
+      {
+        "NAME": "Strawberry Shortcake",
+        "DESCRIPTION": "French vanilla icecream,strawberry filling,vanilla sponge cake,caramel fudge",
+        "PRICE": "$260"
+      },
+      {
+        "NAME": "Mocha Fudge Temptation",
+        "DESCRIPTION": "Chocolate icecream,coffee icecream,brownies,expresso powder,chocolate fudge",
+        "PRICE": "$500"
+      }
+    ],
+    "COFFEE": [
+      {
+        "NAME": "Americano",
+        "DESCRIPTION": "Americano",
+        "PRICE": "$300"
+      },
+      {
+        "NAME": "Cold Coffee",
+        "DESCRIPTION": "Cold Coffee",
+        "PRICE": "$400"
+      }
+    ]
+  },
+  "CART": {
+    "TITLE": "Il tuo ordine",
+    "BUTTON": "Ordine di processo"
+  },
+  "DELIVERY_CONFIRMATION": {
+    "TITLE": "Il tuo indirizzo di consegna",
+    "BUTTON": "Ordine"
+  },
+  "PAYMENT": {
+    "TITLE": "Pagamento",
+    "BUTTON": "pagare"
+  },
+  "DELIVERY_TRACKING": {
+    "TITLE": "Rintraccia il tuo ordine"
+  },
+  "SETTINGS": {
+    "TITLE": "impostazioni"
+  },
+  "CONTACTUS": {
+    "TITLE": "Contattaci"
+  },
+  "ABOUTUS": {
+    "TITLE": "Riguardo a noi"
+  },
+  "ITEM_DETAILS": {
+    "BUTTON": "Aggiungi al carrello"
+  }
+}
