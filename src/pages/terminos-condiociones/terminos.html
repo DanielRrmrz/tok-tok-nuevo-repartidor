@@ -1,24 +1,9 @@
-<ion-header>
-  <ion-navbar color="orange" hideBackButton>
-      <ion-grid>
-          <ion-row>
-              <ion-col col-2>
-                  <button ion-button menuToggle>
-                      <ion-icon name="menu"></ion-icon>
-                  </button>
-              </ion-col>
-              <ion-col col-8>
-                  <div text-center>
-                      <ion-title>Terminos y condiciones</ion-title>
-                  </div>
-              </ion-col>
-              <ion-col col-2></ion-col>
-          </ion-row>
-      </ion-grid>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
+<ion-content fullscreen>
+  <ion-fab bottom right>
+      <button ion-fab color="orange" (click)="cerrar()">
+          <ion-icon name="close"></ion-icon>
+      </button>
+  </ion-fab>
   <h2>Terminos y Condiciones del Uso.</h2><br><br>
   <p><strong>l. La identidad y domicilio del responsable.</strong></p>
 

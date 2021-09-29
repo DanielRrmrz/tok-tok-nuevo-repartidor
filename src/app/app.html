@@ -21,11 +21,24 @@
                 <ion-icon ion-text color="ash" name="filing" item-left></ion-icon>
                 <span ion-text color="ash">Reporte Ganancias</span>
             </ion-item>
-            <ion-item menuClose (click)="openPage('TerminosPage')">
+            <!--<ion-item menuClose (click)="openPage('TerminosPage')">
                 <ion-icon ion-text color="ash" name="information-circle" item-left></ion-icon>
                 <span ion-text color="ash">Terminos y condiciones</span>
-            </ion-item>
-            <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="openPage(page.COMPONENT)">
+            </ion-item>-->
+            <!--TIBE-->
+            <div text-center (click)="alertContact()">
+                <h6>
+                    <span ion-text color="ash">¿Necesitas ayuda?</span>
+                    <ion-badge color="dark">Contáctanos</ion-badge>
+                </h6>
+            </div>
+            <div text-center (click)="irTerminos()">
+                <h6>
+                    <ion-icon iont-text color="ash" name="alert" item-left></ion-icon>
+                    <span STYLE="text-decoration:underline" ion-text color="ash">Términos y condiciones</span>
+                </h6>
+            </div>
+            <ion-item menuClose *ngFor="let page of pages; let i = index" (click)="alertLogout()">
                 <ion-icon ion-text color="ash" [name]="page.ICON" item-left></ion-icon>
                 <span ion-text color="ash">{{'SIDEBAR_List.' + i + '.NAME' | translate}}</span>
             </ion-item>

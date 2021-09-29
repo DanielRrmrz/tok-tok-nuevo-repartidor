@@ -1,16 +1,15 @@
 import { Component, ViewChild } from "@angular/core";
-import { Nav, Platform, AlertController } from "ionic-angular";
+import { Nav, Platform, AlertController, ModalController } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { TranslateService } from "@ngx-translate/core";
 import { HttpClient } from "@angular/common/http";
 import { NativeStorage } from '@ionic-native/native-storage';
-
-
+import { TerminosPage } from "../pages/terminos-condiociones/terminos";
+//import { EmailComposer } from '@ionic-native/email-composer';
 // import * as firebase from "firebase/app";
 import { UbicacionProvider } from '../providers/ubicacion/ubicacion';
 import { PedidosProvider } from '../providers/pedidos/pedidos';
-
 @Component({
   templateUrl: "app.html"
 })
@@ -32,6 +31,7 @@ export class MyApp {
     public alertCtrl: AlertController,
     public ubicacionProv: UbicacionProvider, 
     public pedidosProv: PedidosProvider,
+    public modalCtrl: ModalController,
     private nativeStorage: NativeStorage
   ) {
     this.initializeApp();
@@ -143,5 +143,54 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page);
+  }
+  irTerminos() {
+    const modal = this.modalCtrl.create(TerminosPage);
+    modal.present();
+  }
+  Salir(){
+    localStorage.removeItem("isLogin");
+    localStorage.removeItem("idSucursal");
+    localStorage.removeItem("idRepartidor");
+    this.nav.setRoot("LoginPage");    
+}
+  alertLogout() //Tibe
+  {
+    let alert = this.alertCtrl.create({
+      title: '¿Salir de tu cuenta?',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Si',
+          handler: () => {
+            console.log('Yes clcked');
+            this.Salir();
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+  alertContact() //Tibe
+  {
+    let alert = this.alertCtrl.create({
+      title: 'Contacto',
+      message: 'Telefono: <a href="tel:3320299290">3320299290</a> <br> Correo electrónico: <a href="mailto:hola@lolodelivery.com">hola@lolodelivery.com</a>',
+      buttons: [
+        {
+          text: 'Aceptar',
+          handler: () => {
+            console.log('Yes clicked');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 }
