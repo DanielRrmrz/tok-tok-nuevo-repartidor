@@ -133,7 +133,7 @@ export class ServicioPage {
     //Iniciar Geolocalizacion
     this.ubicacionProv.inicializarRepartidor();
     // this.ubicacionProv.iniciarGeolocalizacion();
-    this.startBackgroundGeolocation();
+    // this.startBackgroundGeolocation();
     this.servicioID = this.navParams.get("servicioID");
     console.log("Este es el servicio: ", this.servicioID);
     if (this.servicioID != null) {
