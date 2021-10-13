@@ -8,8 +8,6 @@ node_modules/
 dist/
 www/
 .sourcemaps/
-platforms/
-plugins/
 
 # Compiled Java class files
 *.class
